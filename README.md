@@ -1,2 +1,2 @@
 # My_Notes
-Notes I made for passing courses
+Notes I made for passing my courses
