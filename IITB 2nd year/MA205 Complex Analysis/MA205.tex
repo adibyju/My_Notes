@@ -1,0 +1,410 @@
+\documentclass[15pt]{article}
+\usepackage[utf8]{inputenc}
+\pagestyle{plain}
+\usepackage{amsmath, amssymb, amsfonts, amsthm, mathtools, mathrsfs}
+\usepackage[
+top    = 2.75cm,
+bottom = 2.55cm,
+left   = 3.00cm,
+right  = 3.00cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\usepackage{bm}
+\usepackage{physics}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[none]{tocbibind}
+\usepackage{float}
+\usepackage{fancyhdr}
+
+\titleformat*{\subsection}{\normalfont}
+\graphicspath{ {./MA205 images/} }
+\definecolor{- }{RGB}{252,107,63}
+\definecolor{orange}{RGB}{132,242,214}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{1}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyfoot[R]{ADI}
+\fancyfoot[L]{\thepage}
+
+\renewcommand{\b}[1]{\begin{#1}}
+\newcommand{\e}[1]{\end{#1}}
+\renewcommand{\i}{\item{}}
+\newcommand{\tb}[1]{\textbf{#1}}
+\renewcommand{\thefigure}{}
+\renewcommand{\cfttoctitlefont}{\Huge}
+
+\b{document}
+   \b{center}
+       \vspace*{12cm}
+       \tb{{\Huge MA205 Short Notes}}
+       
+       \vspace{0.9cm}
+       \tb{\LARGE Aditya Byju}
+            
+       \vspace{0.5cm}
+       \large {\tb{Course Professor:} Prof. Sudarshan Rajendra Gurjar\\
+       \tb{Ref:} Prof's slides\\
+       $i$ love Complex Analysis}
+       
+       \vspace{0.5cm}
+       \tb{Complex Analysis}
+       
+       \vspace{0.5cm}
+       September 2021
+            
+       \vspace{0.8cm}
+    \e{center}
+\thispagestyle{empty}
+
+\newpage
+\tableofcontents
+\addtocontents{toc}{\vspace{0.2cm}}
+
+\newpage
+\phantomsection
+\section*{\color{- }Introduction}
+\addcontentsline{toc}{section}{\large\color{- }Introduction}
+
+\b{itemize}
+    \i \tb{Fundamental theorem of Algebra} - every non-constant polynomial with complex coefficients has a complex root
+    \i {\color{orange}Complex numbers ($\mathbb{C}$)} consists of all the numbers of the form $a + i b$ where $a$ and $b$ are in $\mathbb{R}$. $a$ is called the real part and $b$ is called the imaginary part.
+    \i A complex polynomial of degree $n$ has exactly $n$ roots
+    \i A real polynomial that is irreducible has degree at most two
+\e{itemize}
+
+\phantomsection
+\section*{\color{- }Some basic notions of topology}
+\addcontentsline{toc}{section}{\large\color{- }Some basic notions of topology}
+
+\b{itemize}
+    \i Let $\Omega \subseteq \mathbb{C}$ be a subset. We say that $\Omega$ is an {\color{orange}open subset} of $\mathbb{C}$ if given any point $z_0 \in \Omega$, there exists $\delta > 0$ such that the set $\{z \in \mathbb{C}~\text{such that} ~|z-z_0| < \delta \} \subset \Omega$. Intuitively this means that if some point belongs to $\Omega$, all sufficiently nearby points belong to $\Omega$.
+    \i $z$ is in the {\color{orange}$\delta$-neighbourhood} {\color{orange}($B_\delta (z_0)$)} of $z_0$ means that $z$ is inside the circle with center $z_0$ and radius $\delta$
+    \i A subset $Z \subseteq \mathbb{C}$ is said to be {\color{orange}closed} if its complement is open
+    \i Some properties of closed and open sets:
+    \b{itemize}
+        \item[$-$] $\O$ and $\mathbb{C}$ are both open and closed
+        \item[$-$] arbitrary unions and finite intersections of open subsets is open
+        \item[$-$] arbitrary intersections and finite unions of closed subsets is closed
+    \e{itemize}
+    \i We define {\color{orange}closure} of a subset $S \subseteq \mathbb{C}$ to be the smallest closed set containing $S$. It is denoted $\overline{S}$. Equivalently, the closure of $S$ is the union of $S$ together with its limit points.
+    \i A subset $S \subseteq \mathbb{C}$ is said to be {\color{orange}path-connected} if given any 2 points $z_0,~z_1 \in S$, there exists a continuous path joining them
+    \i An open subset of $\mathbb{C}$ which is path-connected is called a {\color{orange}domain}
+    \i \tb{limit} - let $f$ be a complex valued function defined on some subset of $\mathbb{C}$. If for every $\epsilon > 0$, there is a number $\delta > 0$ such that $|f(z) - L| < \epsilon$ whenever $0 < |z - z_0| < \delta$, then the limit of the function as $z$ tends to $z_0$ is $L$.
+    \b{equation*}
+       \lim_{z \to z_0} f(x) = L
+    \e{equation*}
+    \i A function $f:\Omega \subset \mathbb{C} \rightarrow{} \mathbb{C}$ is continuous at $z_0 \in \Omega$ if
+    \b{equation*}
+        f(z) = f(z_0)
+    \e{equation*}
+    \i The function $f$ is continuous on a domain if it is {\color{orange}continuous} at every point in the domain
+    \i A subset $S \subseteq \mathbb{C}$ is said to be {\color{orange}compact} if it is closed and bounded
+    \i \tb{Theorem:} any continuous complex valued function on a compact subset $S \subseteq \mathbb{C}$ is bounded, i.e., $\exists M \in \mathbb{R}$ such that $|f(z)| < M ~~\forall z \in S$. Even the converse is true: if a subset $S \subseteq \mathbb{C}$ has the property that every continuous function on it is bounded, then $S$ is compact. 
+    \i \tb{differentiable} - let $\Omega \subset \mathbb{C}$ be open. A function $f:\Omega \subset \mathbb{C} \rightarrow{} \mathbb{C}$ is said to be differentiable, (sometimes called {\color{orange}complex-differentiable}) at $z_0$ if the following condition exists:
+    \b{equation*}
+       f'(z_0) = \lim_{z \to z_0} \frac{f(z)-f(z_0}{z-z_0}
+    \e{equation*}
+    \i We say that $f$ is {\color{orange}holomorphic} on $\Omega$ if $f$ is differentiable at each point of $\Omega$. $f$ is holomorphic (also called {\color{orange}complex analytic}) at $z_0$ if it is holomorphic in some neighbourhood of $z_0$.
+    \i If $f$ is holomorphic in a domain, then $f'$ is also holomorphic there
+    \i Once differentiable implies infinitely differentiable (in a domain). In fact something much stronger is true, namely the function is defined by Taylor series.
+\e{itemize}
+
+\phantomsection
+\section*{\color{- }Cauchy-Riemann equations}
+\addcontentsline{toc}{section}{\large\color{- }Cauchy-Riemann equations}
+
+\b{itemize}
+    \i \tb{CR equations} -  differentiability of $f = u+iv$ at $z_0=a+ib$ implies that
+    $u_x,~u_y,~v_x,~v_y$ exist at $(a,b)$ and they satisfy {\color{orange}$u_x=v_y$} and {\color{orange}$u_y=-v_x$}. If CR equations are not satisfied at a point, then f is not differentiable at that point.
+    \i \tb{Def:}
+    \b{equation*}
+      \pdv{}{z} = \frac{1}{2}(\pdv{}{x}-i\pdv{}{y}) \hspace{3cm}  \pdv{}{\overline{z}} = \frac{1}{2}(\pdv{}{x}+i\pdv{}{y})
+    \e{equation*}
+    \i Using the above definition the CR equations can be written as:
+    \b{equation*}
+      \pdv{f}{\overline{z}} = 0
+    \e{equation*}
+    \i Complex differentiability implies:
+    \b{itemize}
+        \item[$-$] real differentiability
+        \item[$-$] real and imaginary parts satisfy CR equations
+    \e{itemize}
+    the converse is also true
+    \i
+    \b{equation*}
+      f'(z_0) =  \pdv{f}{z}\hspace{0cm}(z_0)
+    \e{equation*}
+    \i \tb{Corollary:} let $f:\Omega \subset \mathbb{C} \rightarrow{} \mathbb{C}$ be such that it has continuous partial derivatives throughout $\Omega$. Then if they satisfy the CR equations at a point, f is differentiable at that point.
+    \i \tb{Theorem:} let $f$ be continuous on $\Omega$. Suppose the partial derivatives exist and satisfy the Cauchy-Riemann equations at every point in $\Omega$. Then $f$ is holomorphic in $\Omega$.
+    \i In polar coordinates the CR equations take the form:
+    \b{equation*}
+        u_r = \frac{1}{r} v_\theta~~ \&~ ~v_r = -\frac{1}{r} u_\theta
+    \e{equation*}
+\e{itemize}
+
+\phantomsection
+\section*{\color{- }Harmonic functions}
+\addcontentsline{toc}{section}{\large\color{- }Harmonic functions}
+
+\b{itemize}
+    \i A real valued function $u:U \subset \mathbb{R}^2 \rightarrow{} \mathbb{R}$ is called {\color{orange}harmonic} if it is twice continuously differentiable and satisfies $u_{xx} + u_{yy} = 0$ on $U$.
+    \i If $f = u + iv$ is holomorphic on $\Omega$, then both $u$ and $v$ are harmonic on $\Omega$
+    \i Suppose $u$ and $v$ are harmonic functions on $\Omega$. We say that $v$ is a harmonic conjugate of $u$ if $f=u+iv$ is holomorphic in $\Omega$. Note that $v$ is a harmonic conjugate of $u$ does not mean that $u$ is a harmonic conjugate of $v$.
+    \i  If u and v are harmonic conjugates of each other they are constant functions
+    \i A domain $\Omega \subseteq \mathbb{C}$ is said to be {\color{orange}simply-connected} if it is path-connected and every path between two points can be continuously transformed into any other such path while preserving the two endpoints. Another definition is that the above domain is said to be simply connected if every simple closed curve in $\Omega$ has all its interior points belonging to $\Omega$. If $\Omega$ is simply-connected, then every simple closed curve can be continuously deformed to a point through a continuous family of closed curves.
+    \i The existence of a harmonic conjugate for every harmonic function is guaranteed if and only if the domain is simply-connected.  Conversely, if every harmonic $u$ on $\Omega$ has a harmonic conjugate, then $\Omega$ has to be simply-connected.
+    \i \tb{Theorem:} let $U$ be a simply-connected domain in $\mathbb{C}$ and let $u$ be a harmonic function on $U$. Then $u$ admits exactly one harmonic conjugate up to a constant.
+    \i  Harmonic functions are infinitely differentiable
+    \i \tb{Mean-value property:} let $u$ be a harmonic function on a disc of radius $R$. Then for any $r < R$ small enough, we have:
+    \b{equation*}
+       u(w)=\frac{1}{2\pi} \int_{0}^{2\pi} u(w+re^{i\theta})d\theta
+    \e{equation*}
+    In particular, $u$ does not attain its maximum at any interior point unless it is constant.
+    \i \tb{Identity principle:} let $u$ be a harmonic function on a domain $\Omega \subset \mathbb{C}$. If $u = 0$ on a non-empty open subset $U \subset \mathbb{C}$ then $u = 0$ throughout $\Omega$.
+\e{itemize}
+
+\phantomsection
+\section*{\color{- }Power series}
+\addcontentsline{toc}{section}{\large\color{- }Power series}
+
+\b{itemize}
+    \i Polynomials by definition comes with a finite degree. Polynomial functions in $\mathbb{C}$ are holomorphic everywhere in $\mathbb{C}$.
+    \b{equation*}
+        f(z)=a_0+a_1z+\ldots +a_nz^n,~a_\mathrm{i} \in \mathbb{C}
+    \e{equation*}
+    \i \tb{Power series:}
+    \b{equation*}
+        f(z)=a_0+a_1z+a_2z^2+\ldots 
+    \e{equation*}
+    or more generally,
+    \b{equation*}
+        \sum_{\mathrm{i}~=~0}^{\infty} a_\mathrm{i}(z-z_0)^\mathrm{i}
+    \e{equation*}
+    \i A series of the form $\sum_{n~=~0}^{\infty} a_n$ of complex numbers is said to converge if the sequence of partial sums $s_n= \sum_{k~=~0}^{n} a_k$ converges (to a finite complex number)
+    \i {\color{orange}Radius of convergence} for a power series is a real number $R$ such that $\sum_{\mathrm{i}~=~0}^{\infty} a_\mathrm{i}(z-z_0)^\mathrm{i}$ converges when $|z-z_0| < R$, and diverges when $|z-z_0| > R$. In other words, the radius of convergence is the largest $R$ such that the given power series converges inside a disc of radius $R$. The radius of convergence  exists for any power series.
+    \i The series $\sum_{\mathrm{i}~=~1}^{\infty} a_\mathrm{i}$ is said to be {\color{orange}absolutely convergent} if $\sum_{\mathrm{i}~=~1}^{\infty} |a_\mathrm{i}|$ is convergent
+    \i Absolute convergence $\rightarrow{}$ convergence
+    \i If $\sum_{\mathrm{i}~=~1}^{\infty} b_\mathrm{i}$ is absolutely convergent, and if $|a_\mathrm{i}| \leq |b_\mathrm{i}|$ for all large enough $\mathrm{i}$, then $\sum_{\mathrm{i}~=~1}^{\infty} a_\mathrm{i}$ is absolutely convergent
+    \i The harmonic series $\sum_{}^{} \frac{1}{n}$ diverges
+    \i The series $\sum_{}^{} \frac{1}{n^\alpha}$ converges for any $\alpha >1$
+    \i \tb{supremum:} Let $\{x_n\}$ be a sequence of real numbers. We say that a real number $M$ is the supremum of this sequence if every term of the sequence is less than or equal to $M$ and there exists terms of the sequence which are arbitrarily close to $M$. Equivalently it is the smallest real number having the property that it is greater than or equal to all the terms of the sequence. The supremum may or may not exist and if it exists it may or may not be equal to any of the terms of the sequence (that is the supremum may not be attained by the sequence).
+    \i \tb{upper limit/limit supremum/limit superior (denoted by \emph{lim sup}):} for a sequence of real numbers $x_1,~x_2,\ldots$, let $y_n$ be the supremum of the set $\{x_n,~x_{n+1},\ldots \}$. Then the sequence $y_1,~y_2,\ldots$ is a monotonically decreasing sequence which diverges to $\infty$ or has a finite limit. This is called the upper limit of the sequence $\{x_\mathrm{i}\}$. It can be $\infty$ or $-\infty$. If the limit of the sequence $\{x_n\}$ exists, then the upper limit coincides with the usual limit.
+    \i If $\{x_n\}$ is a convergent sequence converging to $l$, then $l$ is the lim sup
+    \i If $\{x_n\}$ is a sequence of real numbers, then $\limsup{x_n}=max\{ \limsup{x_{2n}},~\limsup{x_{2n+1}} \}$
+    \i \tb{Theorem (Cauchy’s root test):} for a series $\sum_{\mathrm{i}=1}^{\infty} a_\mathrm{i} $ of complex numbers, let $C=\limsup_{\mathrm{i} \to \infty } \sqrt[\mathrm{i}]{|a_\mathrm{i}|}$. Then the series converges absolutely if $C<1$ and it diverges if $C>1$. The test is indecisive for $C = 1$
+    \i \tb{Theorem (Ratio test):} for a series $\sum_{\mathrm{i}=1}^{\infty} a_\mathrm{i} $, let $L=\limsup_{\mathrm{i} \to \infty } |\frac{a_{{\mathrm{i}}+1}}{a_\mathrm{i}}|$. Then, if $L<1$, the series converges absolutely. The series diverges if there exists N such that $|\frac{a_{{\mathrm{i}}+1}}{a_\mathrm{i}}|>1$ for $i\geq N$. $L>1$ doesn’t imply that the series diverges.
+    \i \tb{Theorem (existence of radius of convergence):} for the power series $\sum_{\mathrm{i}=1}^{\infty} a_\mathrm{i}(z-z_0)^\mathrm{i} $, let $R=\frac{1}{\limsup_{\mathrm{i} \to \infty } \sqrt[\mathrm{i}]{|a_\mathrm{i}|}}$. Them the power series converges absolutely if $|z-z_0|<R$ and diverges if $|z-z_0|>R$.
+    \i If a series converges by the ratio test, then it converges by the root test as well. But not conversely. Thus the root test is better than the ratio test. But the ratio test is often easier to use whenever it succeeds.
+    \b{equation*}
+       \limsup_{\mathrm{i} \to \infty } \sqrt[\mathrm{i}]{|a_\mathrm{i}|} \leq \limsup_{\mathrm{i} \to \infty}  {\left\lvert\frac{a_{{\mathrm{i}}+1}}{a_\mathrm{i}}\right\rvert}
+    \e{equation*}
+    \i If the radius of convergence is $\infty$, the series converges everywhere
+    \i A given power series, the differentiated series and the integrated series, all have the same radius of convergence
+    \i A function $f:\Omega  \rightarrow{} \mathbb{C}$ is said to be analytic if it is locally given by a convergent power series, i.e., every $z_0 \in \Omega$ has a neighbourhood contained in $\Omega$ such that there exists a power series centered at $z_0$ which converges to $f(z)$ for all $z$ in that neighbourhood. Analytic functions are infinitely differentiable. An analytic function is given by its Taylor series.
+    \i Holomorphic \hspace{0.05cm}$\rightarrow{}$ analytic
+    \i The {\color{orange}Cauchy-Maclaurin integral test} is a method used to test infinite series of monotonous terms for convergence. Consider a eventually non-negative, continuous function $f$ defined on the unbounded interval $[1,~\infty)$, on which it is eventually monotone decreasing. Then the infinite series $\sum_{1}^{\infty} f(n)$ converges if and only the improper integral $\int_{1}^{\infty} f(x) dx$ exists (i.e., is finite). If the integral diverges then the series diverges as well.
+    \i \tb{Theorem (zeroes are isolated):} let $\Omega$ be a domain and $f:\Omega  \rightarrow{} \mathbb{C}$ be a non-constant analytic function. Let $z_0 \in \Omega$ be such that $f(z_0)=0$. Then, there exists $\delta>0$ auch that $f$ has no other zero in $B_{\delta} (z_0)$. 
+\e{itemize}
+
+\phantomsection
+\section*{\color{- }Some basic functions}
+\addcontentsline{toc}{section}{\large\color{- }Some basic functions}
+
+\b{itemize}
+    \i \tb{transcendental number} - a number that is not the root of a non-zero polynomial of finite degree with rational coefficients
+    \i \tb{hyperbolic cosine:} $\cosh(z) = \frac{e^z+e^{-z}}{2}$. Its power series is given by
+    \b{equation*}
+       \cosh(z) = 1+\frac{z^2}{2!}+\frac{z^4}{4!}+\ldots
+    \e{equation*}
+    \i \tb{hyperbolic sine:} $\sinh(z) = \frac{e^z-e^{-z}}{2}$. Its power series is given by
+    \b{equation*}
+       \sinh(z) = z+\frac{z^3}{3!}+\frac{z^5}{5!}+\ldots
+    \e{equation*}
+    \i The general solutions of $e^w=z$ are given by $\log{|z|}+i(\theta+2\pi n)$
+    \i \tb{Def:} let $\Omega \subseteq \mathbb{C}$ be a domain. Let $f(z)$ be a continuous function on $\Omega$ such that $exp(f(z)) = z ,~\forall z \in \Omega$. Then $f$ is called a branch of the logarithm.
+    \i \tb{Lemma:} let $\Omega \subseteq \mathbb{C}$ be a domain and let $f$ be a branch of the logarithm. Then any other branch of the logarithm differs from $f$ by a constant multiple of $2 \pi i$.
+    \i {\color{orange}Principle branch} of the logarithm is defined as follows: let $\Omega \subset \mathbb{C}$ be the open subset defined by $\mathbb{C}$ minus the negative real line. For any $z \in \Omega, ~z =\{~ |z|e^{i \theta} : -\pi < \theta <\pi~\}=re^{i\theta}$, define $f(z)=\log (r) +i\theta = \log {(|z|)} + i\arg{z} $.
+    \i \tb{Weierstrass product theorem:} one can find a holomorphic function vanishing exactly on any discrete set with prescribed vanishing multiplicities at each of those points
+\e{itemize}
+
+\phantomsection
+\section*{\color{- }Complex integration and associated theorems}
+\addcontentsline{toc}{section}{\large\color{- }Complex integration and associated theorems}
+
+\b{itemize}
+    \i Let $f:[a,b] \rightarrow{} \mathbb{C}$ be a piecewise continuous function. Let $f(t)=u(t)+iv(t)$. We define
+    \b{equation*}
+       \int_{a}^{b} f(t)dt
+    \e{equation*}
+    to be
+    \b{equation*}
+       \int_{a}^{b} u(t)dt + i\int_{a}^{b} v(t)dt
+    \e{equation*}
+    where both these integrals are defined to be the usual Riemann integrals.
+    \i If $\gamma(t)=x(t)+iy(t)$ is a parmetrized curve, then we define the length of $\gamma$ to be
+    \b{equation*}
+       \int_{a}^{b} |\gamma'(t)|dt = \int_{a}^{b} \sqrt{x'(t)^2+y'(t)^2}dt
+    \e{equation*}
+    In case $\gamma$ is not continuously differentiable, i.e., $x(t),~y(t)$ are not $C^1$ functions of t, we define the length of the curve as follows: choose $n$ points $P_1, \ldots,P_n$ on the curve. Consider the sum $\sum_{1}^{n-1} |P_{{\mathrm{i}}+1}-P_\mathrm{i}|$, where $|P_\mathrm{i}-P_{{\mathrm{i}}-1}|$ denotes the length of the straight line joining with $P_\mathrm{i}$ with $P_{{\mathrm{i}}-1}$. As $n$ tends to infinity and the length of each of these line segments goes to zero, we define the length of the curve to be the limit (if it exists) $\lim_{n \to \infty} \sum_{i}^{n}|P_{{\mathrm{i}}+1}-P_\mathrm{i}|$.The curve is called {\color{orange}rectifiable} if the length exists.
+    \i We say a curve $\gamma (t)=x(t)+iy(t)$ is {\color{orange}smooth} if $\gamma '(t) \neq 0$ for all t. Such a curve is also called {\color{orange}regular parametrized curve.}
+    \i A {\color{orange}contour} is a curve consisting of a finite number of smooth curves joined end to end. It is said to be {\color{orange}simple} if the parametrization map is one to one except possibly at the end-points. (Intuitively it means that the curve does not cross itself). It is said to be {\color{orange}closed} if the initial and end-point are the same. i.e., $\gamma(a)=\gamma(b)$.
+    \i \tb{Jordan curve theorem:} any simple closed curve in $\mathbb{R}^2$ seperates the plane in to two connected components. The curve is the common boundary of both of them. Exactly one of the components is bounded. 
+    \i Let $f:\Omega \rightarrow{} \mathbb{C}$ be a complex function defined on a domain $\Omega$ and let $C$ be a contour with initial point $z_0$ and terminal point $z$. We define the integral of $f$ along $C$ to be
+    \b{equation*}
+       \int_{C}^{} f(z)dz =\int_{a}^{b} f(z(t))z'(t)dt
+    \e{equation*}
+    \i Properties of complex line integrals:
+    \b{itemize}
+        \item[$-$] this integral is independent of parametrization
+        \item[$-$] $\int_{-C} f(z)dz=-\int_{C} f(z)dz$ where $-C$ is the opposite curve, i.e., curve with the opposite parametrization
+        \item[$-$] $\int_{C_1\cup C_2 \cup \ldots C_n}f(z)dz=\int_{C_1}f(z)dz + \ldots + \int_{C_n}f(z)dz$
+        \item[$-$] $|\int_{C}f(z)dz| \leq \int_{C}|f(z)||dz| $
+    \e{itemize}
+    \i The function $f$ has a primitive (integral) iff $\int f(z)dz$ is path independent
+    \i \tb{Cauchy's theorem:} let $C$ be a simple closed contour and let $f$ be a holomorphic function defined on an open set containing $C$ as well as its interior. Then $\int_{C}f(z)dz = 0$.
+    \i \tb{Cauchy's theorem (more general form - \uppercase\expandafter{\romannumeral 1 \relax}):} let $\Omega$ be a simply connected domain in $\mathbb{C}$. Let $f(z)$ be a holomorphic function defined on $\Omega$. Let $C$ be a simple closed contour in $\Omega$. Then $\int_{C} f(z)dz=0$
+    \i \tb{Cauchy's theorem (even stronger form):} let $\Omega$ be a simply connected domain in $\mathbb{C}$. Let $f(z)$ be a holomorphic function defined on $\Omega$. Let $C$ be a simple closed rectifiable curve in $\Omega$. Then $\int_{C}f(z)dz=0$
+    \i \tb{Goursat's theorem:}  if $f(z)$ is holomorphic, then $f'(z)$ is continuous
+    \i $\mathbb{C}$, any open disc in $\mathbb{C}$, $\mathbb{C}$ minus negative reals, open annulus are all not simply connected. Also any open set minus a non-empty set of finitely many points is not simply connected.
+    \i \tb{Cauchy's theorem (more general form - \uppercase\expandafter{\romannumeral 2 \relax}):} let $\Omega$ be a domain in $\mathbb{C}$. If $\gamma$ and  $\gamma'$ are two closed contours in $\Omega$ which can be continuously deformed into each other, then:
+    \b{equation*}
+       \int_{\gamma} f(z)dz=\int_{\gamma'} f(z)dz
+    \e{equation*}
+    \i \tb{Cauchy integral formula (CIF):} let $f$ be holomorphic on an open set containing a simple closed contour $\gamma$ and its interior (oriented positively). If $z_0$ is interior to $\gamma$, then:
+    \b{equation*}
+       f(z_0)=\frac{1}{2\pi i}\int_{\gamma} \frac{f(z)}{z-z_0}dz
+    \e{equation*}
+    \i \tb{ML inequality:} if $\gamma$ is a contour of length $L$ and $|f(z)|\leq M$ on $\gamma$, then $|\int_{\gamma} f(z)dz|\leq ML$
+    \i \tb{Theorem (holomorphic $\rightarrow{}$ analytic):} let $f$ be a holomorphic function in a neighbourhood of a point $z_0 \in \mathbb{C}$. Let $R > 0$ be such that $f$ is holomorphic in $|z - z_0| < R$. Let $\gamma$ be a circle of radius $r$ with $r < R$ entered at $z_0$. Then, in the disc $|z - z_0| < R$, $~f(z)$ is written as: 
+    \b{equation*}
+       f(z)=\sum_{n~=~0}^{\infty} a_n(z-z_0)^n
+    \e{equation*}
+    where each $a_n$ is given by:
+    \b{equation*}
+       a_n=\frac{1}{2\pi i}\int_{|w-z_0|=r}^{} \frac{f(w)}{(w-z_0)^{n+1}}dw
+    \e{equation*}
+    \i If $\Omega$ is a domain in $\mathbb{C}$, $\gamma$ is a simple closed curve, $f$ a holomorphic function on an open set containing $\gamma$ and its interior and $z_1,\ldots ,z_n$ are distinct points in the interior of $\gamma$ and $a_\mathrm{i} \in \mathbb{Z}$, then:
+    \b{equation*}
+       \int_{\gamma} \frac{f(z)}{(z-z_1)^{a_1}(z-z_2)^{a_2}\ldots (z-z_n)^{a_n}} dz = \sum_{\mathrm{i}~=~1}^{n} \int_{C_\mathrm{i}} \frac{f(z)}{(z-z_1)^{a_1}(z-z_2)^{a_2}\ldots (z-z_n)^{a_n}} dz
+    \e{equation*}
+    where $C_\mathrm{i}$ is a small circle around $z_\mathrm{i}$ not containing any of the other $z_\mathrm{j}$’s
+    \i If $f$ is holomorphic on a domain $\Omega$, and $z_0$ is any point in $\Omega$, then the radius of convergence of the power series expanded around $z_0$ is the radius of the largest circle centered at $z_0$ on which $f$ extends to a holomorphic function
+    \i \tb{Morera's theorem:} is a converse to Cauchy’s theorem. It states that if $\Omega$ is a domain in $\mathbb{C}$ and if $f:\Omega \rightarrow{} \mathbb{C}$ is a continuous, complex valued function on $\Omega$ such that $\int_{\gamma} f(z)dz=0$ for every closed contour $\gamma$ in $\mathbb{C}$, then $f$ is holomorphic on $\Omega$.
+    \i \tb{Cauchy's estimate:} suppose that $f$ is holomorphic on $|z-z_0|<R$ and bounded by $M>0$ there. Then:
+    \b{equation*}
+       |f^n(z_0)|\leq \frac{n!\hspace{0.05cm}M}{R^n}
+    \e{equation*}
+    \i A function defined all over $\mathbb{C}$ is called {\color{orange}entire} if it is holomorphic everywhere in $\mathbb{C}$ 
+    \i \tb{Liouville's theorem:} a bounded above entire function is a constant. A non-constant entire function has to be unbounded. 
+    \i A continuous function $f:\mathbb{C} \rightarrow{} \mathbb{C}$ is said to be {\color{orange}proper} if $|f(z)|\rightarrow{}\infty$ as $|z|\rightarrow{}\infty$. Equivalently $f$ is proper if it is continuous and inverse image of a bounded set is bounded.
+    \i Non-constant polynomial functions on $\mathbb{C}$ are proper. Any proper, holomorphic function from $\mathbb{C}$ to $\mathbb{C}$ is neccessarily a non-constant polynomial.
+\e{itemize}
+
+\phantomsection
+\section*{\color{- }Logarithm revisited}
+\addcontentsline{toc}{section}{\large\color{- }Logarithm revisited}
+
+\b{itemize}
+    \i \tb{Theorem:} let $\Omega$ be a simply connected domain in $\mathbb{C}$ with $1\in \Omega$ and $0\notin \Omega$. Then there exists a unique holomorphic function $F(z)$ on $\Omega$, (denoted $\log(z)$) such that:
+    \b{itemize}
+        \item[$-$] $F(1)=0 ~\text{and} ~F'(z)=1/z$
+        \item[$-$] $e^{F(z)}=z ,~\forall z \in \Omega$
+        \item[$-$] $F(r)=\log(r)$ when r is any positive real number contained $\Omega$. (With the usual definition of log for real numbers)
+    \e{itemize}
+\e{itemize}
+
+\phantomsection
+\section*{\color{- }Singularities}
+\addcontentsline{toc}{section}{\large\color{- }Singularities}
+
+\b{itemize}
+    \i If $z_0 \in \mathbb{C}$ is any point and $\gamma$ is any closed contour not passing through $z_0$, then $\int_{\gamma} \frac{1}{z-z_0}dz$ is an integer multiple of $2\pi i$. This integer is called the {\color{orange}winding number} of $\gamma$ around $z_0$ and counts the number of times the curves winds around $z_0$. This integer could be negative which happens when the curve winds around in clockwise orientation. If $\gamma$ is a finite union of simple closed curves and $z_0$ lies outside $\gamma$ (which makes sense by Jordan curve theorem), then this integer is zero. If $\gamma$ is a simple closed curve, and $z_0$ lies in the interior of $\gamma$ then this integer is 1.
+    \i \tb{singularity of a function} - the set of points in $\Omega$ where $f$ is not defined or not holomorphic are called the singularities of $\Omega$. Singularities are of 2 types: {\color{orange}isolated} and {\color{orange}non-isolated} singularities.
+    \i A singular point is said to be isolated if the function is holomorphic in a punctured disc around that point i.e., that point is the only singularity in a small neighborhood of that point. A singularity is non-isolated if it is not isolated. That is, in no punctured neighborhood of the singularity is the function holomorphic.
+    \i Isolated singularities are of two types: {\color{orange}removable} and {\color{orange}non-removable} singularities. If an isolated singularity can be removed by defining the function by assigning a certain value at that point, we say that the singularity is removable. If not we say it is non-removable.
+    \i \tb{Reimann's removable singularity theorem:} $z_0$ is a removable singularity of $f$\hspace{0.05cm} iff $\hspace{0.1cm}\lim_{z\rightarrow{}z_0} f(z)$ exists 
+    \i A {\color{orange}pole} is a point at which the function blows up from all directions. An isolated singularity $z_0$ is said to be a pole if $\lim_{z\rightarrow{}z_0} f(z) \rightarrow{ }\infty$.
+    \i \tb{order of a pole} - if $z_0$ is a pole of $f$, then there exists an integer $m>0$ such that $f(z)=(z-z_0)^{-m}f_1(z)$ on a punctured neighbourhood of $z_0$, for some function $f_1$ which is holomorphic on the neighbourhood of $z_0$. The smallest such integer $m$ is called the order of the pole. If $m$ is 1, then $z_0$ is said to be {\color{orange}simple pole.}
+    \i A function $f(z)$ defined on an open set except at all the poles is called a {\color{orange}meromorphic function}. That is, the only singularities are poles.
+    \i  An isolated singularity that is neither a pole nor a removable singularity is called an {\color{orange}essentially singularity}
+    \i \tb{Casorati-Weierstrass theorem:} if $z_0$ is an isolated singularity, then it is essential iff the values of $f$ come arbitrarily close to every complex number in a neighborhood of $z_0$
+    \i Removable, pole and essential singularities come under isolated singularity
+\e{itemize}
+
+\phantomsection
+\section*{\color{- }Laurent series}
+\addcontentsline{toc}{section}{\large\color{- }Laurent series}
+
+\b{itemize}
+    \i \tb{Theorem (modified CIF):} suppose $z_0$ is an isolated singularity of $f$. Consider an annulus with radius $R > r$ centered at $z_0$ on which $f$ is holomorphic. Then CIF takes the form:
+    \b{equation*}
+       f(z)=\frac{1}{2\pi i}\int_{|w-z_0|~=~R} \frac{f(w)}{w-w_0}dw - \frac{1}{2\pi i}\int_{|w-z_0|~=~r} \frac{f(w)}{w-w_0}dw
+    \e{equation*}
+    \i \tb{Laurent series:} 
+    \b{equation*}
+       f(z)=\sum_{n~=~-\infty}^{\infty} a_n(z-z_0)^n
+    \e{equation*}
+    where each $a_n$ is given by:
+    \b{equation*}
+       a_n=\frac{1}{2\pi i}\int_{|w-z_0|~=~r_0}^{} \frac{f(w)}{(w-z_0)^{n+1}} dw
+    \e{equation*}
+    note that the singularity at $z_0$ is:
+    \b{itemize}
+        \item[$-$] removable iff principal part is zero
+        \item[$-$] pole iff principal part is finite
+        \item[$-$] essential iff principal part is infinite
+    \e{itemize}
+    \i The {\color{orange}principal part} of the Laurent series is:
+    \b{equation*}
+       f(z)=\sum_{n~=~-\infty}^{-1} a_n(z-z_0)^n
+    \e{equation*}
+    \i \tb{residue} - if $z_0$ is an isolated singularity of $f$, then $f$ is holomorphic in an annulus $0 < |z - z_0| < R$ for some $R$. The corresponding Laurent expansion is called the Laurent expansion around $z_0$. Consider the $-1^{st}$ coefficient of this Laurent series:
+    \b{equation*}
+       a_{-1}=\frac{1}{2\pi i}\int_{\gamma}^{} f(z)dz
+    \e{equation*}
+    if you integrate a Laurent series, only $a_{-1}$ remains, other terms vanish. What remains is called a {\color{orange}residue:}
+    \b{equation*}
+       a_{-1}=\text{Res}(f;z_0)
+    \e{equation*}
+    \i \tb{Cauchy residue theorem:} suppose $f$ is given and $\gamma$ is given. Suppose there are finitely many isolated singularities of $f$ inside $\gamma$ say $z_1,~z_2,\ldots,~z_n$. Then $\int_{\gamma} f(z)dz$ is:
+    \b{equation*}
+       \int_{\gamma} f(z)dz=2\pi i \sum_{\mathrm{i}~=~1}^{n}\text{Res}(f;z_0)
+    \e{equation*}
+    \i The function $f(z)$ is said to have an isolated singularity at $\infty$ if $f$ is holomorphic outside a disc of radius $R$ for some $R$
+    \i The function $f(z)$ is said to have a zero (resp. removable singularity, pole, essential singularity) at $\infty$ if $f(1/z)$ has a zero (resp. removable singularity, pole, essential singularity) at 0
+    \i \tb{Theorem:} an entire functions from $\mathbb{C}$ to $\mathbb{C}$ has a pole at $\infty$ iff it is a non-constant polynomial
+\e{itemize}
+
+\phantomsection
+\section*{\color{- }Some important theorems}
+\addcontentsline{toc}{section}{\large\color{- }Some important theorems}
+
+\b{itemize}
+    \i \tb{Jordan's lemma:} let $f$ be a continuous function defined on the semicircular contour $C_R=\{Re^{i\theta} | \theta \in [0,\pi]\}$ of the form $f(z)=e^{iaz}g(z)$, where $g(z)$ is a continuous function and with $a>0$. Then:
+    \b{equation*}
+       {\left\lvert\int_{C_R} f(z)dz\right\rvert} \leq \frac{\pi}{a} \max_{\theta \in [0,\pi]} |g(Re^{i\theta})|
+    \e{equation*}
+    \i \tb{Maximum modulus theorem:} it states that a non-constant holomorphic function in a domain never attains its maximum modulus at any point in the domain
+    \i \tb{Schwarz lemma:} let $D = {z : |z| < 1}$ be the open unit disk and let $f : D \rightarrow{} C$ be a holomorphic map such that $f(0) = 0$ and $|f(z)| \leq 1$ on $D$. Then, $|f(z)| \leq |z|, ~\forall z \in D$ and $|f'(0)|\leq 1$. Moreover, if $|f(z)| = |z|$ for some non-zero $z$ or $|f'(0)| = 1$, then $f(z) = az$ for some $a \in C$ with $|a| = 1$.
+    \i \tb{Open mapping theorem:} any non-constant holomorphic function defined on a domain $\Omega \subseteq \mathbb{C}$ is open i.e., maps open subsets of $\mathbb{C}$ contained in $\Omega$ to open subsets of $\mathbb{C}$.
+    \i \tb{Mittag-Leffler’s theorem:} Given any discrete sequence of points going to infinity, there exists a meromorphic functions with poles exactly along this sequence and having prescribed principal parts at those poles
+    \i \tb{Rouche’s theorem:} let $\gamma$ be a simple closed contour and let $f(z)$ and $g(z)$ be two functions holomorphic on an open set containing $\gamma$ and its interior. Suppose $|f(z) - g(z)| < |f(z)|$ at all points on $\gamma$. Then $\gamma$ encloses the same number of zero’s of $f(z)$ and $g(z)$.
+    \i \tb{Argument principle:} let $\gamma$ be a simple closed contour contained in $C$ and let $f (z)$ be a meromorphic function on an open set containing $\gamma$ and its interior such that $\gamma$ does not pass through any of the zeros and poles of $f(z)$. Then
+    \b{equation*}
+       \frac{1}{2\pi i}\int_{\gamma} \frac{f'(z)}{f(z)}dz=N-P
+    \e{equation*}
+    where $N$ and $P$ denote the number of zero’s and poles enclosed by $\gamma$ with each zero and pole counted as many times as its order.
+    \i \tb{Rouche's theorem:} let $\gamma$ be a simple closed contour and let $f (z)$ and $g(z)$ be two functions holomorphic on an open set containing $\gamma$ and its interior. Suppose $|f (z) - g(z)| < |f (z)|$ at all points on $\gamma$. Then $\gamma$ encloses the same number of zero’s of $f (z)$ and $g(z)$.
+    \i \tb{Little Picard theorem:} the image of a non-constant entire function can miss at most one point
+    \i \tb{Big Picard theorem:} the image of any small punctured neighborhood of an essential singularity can miss at most one point
+\e{itemize}
+\e{document}
