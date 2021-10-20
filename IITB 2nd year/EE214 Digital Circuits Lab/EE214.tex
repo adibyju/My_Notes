@@ -8,6 +8,10 @@ left   = 3.00cm,
 right  = 3.00cm]{geometry}
 \usepackage{graphicx}
 \usepackage{xcolor}
+
+\pagecolor[RGB]{18,18,18} %blackish
+\color[rgb]{0.9, 0.9, 0.9} %greyish
+
 \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{tocloft}
@@ -18,7 +22,7 @@ right  = 3.00cm]{geometry}
 \usepackage{fancyhdr}
 
 \titleformat*{\subsection}{\normalfont}
-\graphicspath{ {./HS101 images/} }
+\graphicspath{ {./EE214 images/} }
 \definecolor{- }{RGB}{245,92,71}
 \definecolor{green}{RGB}{144,217,130}
 \setcounter{secnumdepth}{5}
@@ -41,15 +45,15 @@ right  = 3.00cm]{geometry}
 \b{document}
    \b{center}
        \vspace*{12cm}
-       \tb{{\Huge EE214 {\color{- }boring} Short Notes}}
+       \tb{{\Huge EE214 Short Notes}}
        
        \vspace{0.9cm}
        \tb{\LARGE Aditya Byju}
             
        \vspace{0.5cm}
        \large {\tb{Course Professor:} Prof. D. K. Sharma, Prof. Mariam Shojaei Baghini\\
-       \tb{Ref:} Prof's video lectures\\
-       If you ain't getting anything, we'll be best friends\hspace{0.05cm}!}
+       \tb{Ref:} Prof's video lectures and slides\\
+       The best is yet to be\hspace{0.05cm}!}
        
        \vspace{0.5cm}
        \tb{Digital Circuits Lab}
@@ -248,6 +252,75 @@ right  = 3.00cm]{geometry}
     \i Scan chain is a technique used in design for testing. The objective is to make testing easier by providing a simple way to set and observe every flip-flop in an IC. 
 \e{itemize}
 
+\phantomsection
+\section*{\color{- }Behavioural modelling}
+\addcontentsline{toc}{section}{\large\color{- }Behavioural modelling}
+\b{itemize}
+    \i In the behavioral modeling style in VHDL, we describe the behavior of an entity using sequential statements. The primary mechanism to write a program in behavioral style is by using something called a {\color{green}process.}
+    \i \tb{Process block:}
+    \b{itemize}
+        \item[$-$] a Process block is a concurrent block, inside which statements are executed sequentially
+        \item[$-$] it exists between the begin and end keywords of the architecture
+        \item[$-$] it can use all signals and ports, and we can define variables inside them
+    \e{itemize}
+    Syntax for process is:
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=11cm]{EE214 images/Syntax for process.png}
+    \end{figure}
+    \i Syntax for function is:
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=11cm]{EE214 images/Syntax for function.png}
+    \end{figure}
+    \i \tb{Variables:}
+    \b{itemize}
+        \item[$-$] defined inside a process, after the process declaration before the ‘begin’ keyword. Only valid inside that process.
+        \item[$-$] signals and ports, like wires in any physical system have an inherent delay, after which their values are updated. Variables do not have such a delay, and thus can be used like we use variables in Python, C++ etc.
+    \e{itemize}
+    \i \tb{Sensitivity list of a process:}
+    \b{itemize}
+        \item[$-$] a process block is a concurrent block, which will be executed again and again unless told to stop, thus, we have a sensitivity list (or a wait statement) which only allows the process to fire when some condition is true
+        \item[$-$] a sensitivity list can contain multiple inputs, outputs, signals
+        \item[$-$] in case of a sensitivity list, the process will be fired if and only if there is any change in value of any of the values in the list
+    \e{itemize}
+    \i \tb{wait statement:} it can be used in one of four ways:
+    \b{itemize}
+        \item[$-$] wait on: it is a long form version of the sensitivity list. The process will fire only if there is a change in any of the items in the statement.
+        \item[$-$] wait until: this involves a boolean condition to be true. There is a boolean expression which is given with this statement, and when it evaluates to true, the process is fired. This is used largely to make a system sensitive to a single edge or a single level.
+        \item[$-$] wait for: this is used to make the system wait for a fixed time. The time has to be specified. This is used more in testbenches where an input to a system needs to be applied for a fixed time, until a new one can be applied to get a reliable output.
+        \item[$-$] wait: just tell the process to die and never fire again. Usually used after application of the last input, to formally kill the process. Every process has to compulsorily have atleast one of these wait statements else the compiler will throw an error (so that the process need not be running all the time, thereby loading the simulation software).
+    \e{itemize}
+    \i \tb{if statement:} it can be used only inside a process. It's syntax is:
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=9cm]{EE214 images/Syntax for if statement.png}
+    \end{figure}
+    \i \tb{for statement:} like if statement, it can also be used only inside a process. It's syntax is:
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=5.7cm]{EE214 images/Syntax for for statement.png}
+    \end{figure}
+\e{itemize}
 
+\phantomsection
+\section*{\color{- }Sequential circuits and FSMs}
+\addcontentsline{toc}{section}{\large\color{- }Sequential circuits and FSMs}
+\b{itemize}
+    \i In {\color{green}sequential systems} output could depend on what are the inputs you get now, as well as what was your past output
+    \i Between each clock positive edge, the flip-flops have a value at their output, which is called the holding output. At each instant, it gives some information. This is called {\color{green}state} of a system. If there are a defined number of states in the system (8 in the previous case), it is called a {\color{green}Finite State Machine (FSM)}
+    \i \tb{State diagram:}
+    \b{itemize}
+        \item[$-$] contains all states of the systems
+        \item[$-$] arrows represent what is the next state the system should go to when it reaches current state
+        \item[$-$] must have all possible states of the system (exhaustive)
+    \e{itemize}
+    \i \tb{State table:} is a tabular representation of the state diagram
+    \i \tb{case statement:} it can be used only inside a process. Unlike if condition, cases cannot overlap with each other (hence flipflop cannot be designed using case statement). It's syntax is:
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=10.5cm]{EE214 images/Syntax for case statement.png}
+    \end{figure}
+\e{itemize}
 
 \e{document}
