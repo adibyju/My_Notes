@@ -10,6 +10,9 @@ right  = 3.00cm]{geometry}
 \usepackage{graphicx}
 \usepackage{xcolor}
 
+% \pagecolor[RGB]{18,18,18} %blackish
+% \color[rgb]{0.9, 0.9, 0.9} %greyish
+
 \usepackage{bm}
 \usepackage{hyperref}
 \usepackage{titlesec}
@@ -22,7 +25,7 @@ right  = 3.00cm]{geometry}
 
 \titleformat*{\subsection}{\normalfont}
 \graphicspath{ {./MA109 images/} }
-\definecolor{- }{RGB}{158,0,32}
+\definecolor{- }{RGB}{158,0,32} %250,0,32
 \definecolor{lg}{RGB}{100,200,0} %lightgreen
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{1}
@@ -75,7 +78,7 @@ right  = 3.00cm]{geometry}
 \addcontentsline{toc}{section}{\large\color{- }Introduction}
 
 \b{itemize}
-    \i A {\color{lg}sequence} in a set $X$ is a function $a:\mathbb{N}\rightarrow X$, that is, a function from the natural numbers to $X$
+    \i A {\color{lg}sequence} in a set $X$ is a function ${\color{lg}a}:\mathbb{N}\rightarrow X$, that is, a function from the natural numbers to $X$
     \i Sequence of {\color{lg}partial sums} is given by $\{s_n\}_{n=1}^\infty$, where $s_n$ is:
     \b{equation*}
        s_n=\sum_{k~=~1}^n a_k
@@ -111,8 +114,8 @@ right  = 3.00cm]{geometry}
         \e{equation*}
         Note that in the second theorem we do not assume that $b_n$ converges, thus we get the convergence of $b_n$ for free
     \e{itemize}
-    \i \tb{Def:} A sequence $a_n$ is said to be {\color{lg}bounded} if there is a real number $M > 0$ such that $|a_n| \leq M$ for every $n \in N$. A sequence that is not bounded is called {\color{lg}unbounded}.
-    \i Bounded sequences don't necessarily converge - for e.g. $a_n=(-1)^n$
+    \i \tb{Def:} A sequence $a_n$ is said to be {\color{lg}bounded} if there is a real number $M > 0$ such that $|a_n| \leq M$ for every $n \in N$. A sequence that is not bounded is called {\color{lg}unbounded.}
+    \i Bounded sequences don't necessarily converge (for e.g. $a_n=(-1)^n$)
     \i \tb{Lemma:} Every convergent sequence is bounded
     \i \tb{Def:} A sequence $a_n$ is said to be bounded above (resp. bounded below) if $a_n < M$ (resp. $a_n > M$) for some $M \in\mathbb{R}$. A sequence that is bounded both above and below is obviously bounded.
     \i \tb{Theorem:} A monotonically increasing (resp. decreasing) sequence which is bounded above (resp. below) converges
@@ -128,11 +131,11 @@ right  = 3.00cm]{geometry}
     \i \tb{Theorem:} every Cauchy sequence in $\mathbb{R}$ converges (to a real number)
     \i \tb{Theorem:} every convergent sequence (in any set X) is Cauchy
     \i A set X in which every Cauchy sequence converges (to a limit in X) is called a {\color{lg}complete set}. The real numbers are complete.
-    \i Two sequence $\{a_n\}$ and $\{b_n\}$ will be related to each other (and we write $a_n \sim b_n$) if:
+    \i Two sequences $a_n$ and $b_n$ will be related to each other (and we write $a_n \sim b_n$) if:
     \b{equation*}
        \lim_{n~\rightarrow ~\infty} |a_n-b_n|=0
     \e{equation*}
-    This is an equivalence relation and it is a fact that it partitions the set $S$ into disjoint classes. The set of disjoint classes is denoted by  $S/\sim$. If two sequences converge to the same limit, they are necessarily in the same class. A real number is an equivalence class in $S/\sim$. So a real number should be thought of as the collection of all rational sequences which converge to it.
+    This is an equivalence relation and it is a fact that it partitions the set $S$ into disjoint classes. The set of disjoint classes is denoted by  $S/\hspace{-0.1cm}\sim$. If two sequences converge to the same limit, they are necessarily in the same class. A real number is an equivalence class in $S/\hspace{-0.1cm}\sim$. So a real number should be thought of as the collection of all rational sequences which converge to it.
     \i \tb{Achilles and the tortoise (Zeno's paradox):} in a race, the quickest runner can never overtake the slowest, since the pursuer must first reach the point whence the pursued started, so that the slower must always hold a lead
     \i \tb{Def:} A function $f : (a, b) \rightarrow \mathbb{R}$ is said to tend to (or converge to) a limit $l$ at a point $x_0 \in [a, b]$ if for all $\epsilon>0$ there exists $\delta> 0$ such that:
     \b{equation*}
@@ -145,11 +148,11 @@ right  = 3.00cm]{geometry}
     \i  The limit of a function may exist even if the function is not defined at that point
     \i \tb{The Sandwich theorems (for functions):}
     \b{itemize}
-        \item[$-$] Theorem 1: As $x \rightarrow x_0$, if $f (x) \rightarrow l_1$, $g(x) \rightarrow l_2$ and $h(x) \rightarrow l_3$ for functions $f , ~g, ~h$ on some interval $(a, b)$ such that $f (x) \leq g(x) \leq h(x)$ for all $x \in (a, b)$, then:
+        \item[$-$] \tb{Theorem 1:} As $x \rightarrow x_0$, if $f (x) \rightarrow l_1$, $g(x) \rightarrow l_2$ and $h(x) \rightarrow l_3$ for functions $f , ~g, ~h$ on some interval $(a, b)$ such that $f (x) \leq g(x) \leq h(x)$ for all $x \in (a, b)$, then:
         \b{equation*}
         l_1\leq l_2\leq l_3 
         \e{equation*}
-        \item[$-$] Theorem 2: Suppose $\lim_{x~\rightarrow~x_0} f(x)=\lim_{x~\rightarrow~x_0} h(x)=l$ and If $g(x)$ is a function satisfying $f (x) \leq g(x) \leq h(x)$ for all $x \in (a, b)$, then $g(x)$ converges to a limit as $x\rightarrow x_0$ and: 
+        \item[$-$] \tb{Theorem 2:} Suppose $\lim_{x~\rightarrow~x_0} f(x)=\lim_{x~\rightarrow~x_0} h(x)=l$ and If $g(x)$ is a function satisfying $f (x) \leq g(x) \leq h(x)$ for all $x \in (a, b)$, then $g(x)$ converges to a limit as $x\rightarrow x_0$ and: 
         \b{equation*}
         \lim_{x~\rightarrow~x_0} g(x)=l
         \e{equation*}
@@ -180,12 +183,12 @@ right  = 3.00cm]{geometry}
     \i \tb{The extreme value theorem:}  a continuous function on a closed bounded interval $[a, b]$ is bounded and attains its infimum and supremum, that is, there are points $x_1$ and $x_2$ in $[a, b]$ such that $f (x_1) = m$ and $f (x_2) = M$, where $m$ and $M$ denote the infimum and supremum respectively
     \i \tb{Theorem:} a function $f (x)$ is continuous at a point $a$ if and only if for every sequence $x_n \rightarrow a$, $\lim_{x_n~\rightarrow ~a} f (x_n) = f (a)$. A function that satisfies the above property is said to be {\color{lg}sequentially continuous}.
     \i \tb{Theorem:} a function $f : (a, b) \rightarrow\mathbb{R}$ is continuous at $c$ if and only if it is sequentially continuous at $c$
-    \i  Functions that satisfy the property below for some $\alpha$ (not necessarily greater than 1) are said to be {\color{lg}Lipschitz continuous} with exponent $\alpha$:
+    \i  Functions that satisfy the following property for some $\alpha$ (not necessarily greater than 1) are said to be {\color{lg}Lipschitz continuous} with exponent $\alpha$:
     \b{equation*}
        \left| \lim_{h~\rightarrow ~0} \frac{f(x+h)-f(x)}{h}\right |\leq C\lim_{h~\rightarrow 0} |h|^{\alpha - 1}=0
     \e{equation*}
     \i \tb{Def:} the function $f$ is said to attain a maximum (resp. minimum) at a point $x_0 \in X$ if $f (x) \leq f (x_0)$ (resp. $f (x) \geq f (x_0)$) for all $x \in X$
-    \i \tb{Def:} let $f : X \rightarrow\mathbb{R}$ be a function and $x_0$ be in $X$. Suppose there is an sub-interval $x_0 \in (c, d) \subset X$ such that $f (x_0) \geq f (x)$ (resp. $f (x_0) \leq f (x)$) for all $x \in (c, d)$, then $f$ is said to have a local maximum (resp. local minimum) at $x_0$ 
+    \i \tb{Def:} let $f : X \rightarrow\mathbb{R}$ be a function and $x_0$ be in $X$. Suppose there is a sub-interval $x_0 \in (c, d) \subset X$ such that $f (x_0) \geq f (x)$ (resp. $f (x_0) \leq f (x)$) for all $x \in (c, d)$, then $f$ is said to have a local maximum (resp. local minimum) at $x_0$ 
 \e{itemize}
 
 \phantomsection
@@ -201,7 +204,7 @@ right  = 3.00cm]{geometry}
        \frac{f(b)-f(a)}{b-a}=f'(x_0)
     \e{equation*}
     \i Rolle’s theorem is a special case of the Mean Value Theorem (MVT)
-    \i \tb{Theorem:} if $f$ satisfies the hypotheses of the MVT, and further $f'(x_0)$ for every $x \in (a, b)$, $f$ is a constant function
+    \i \tb{Theorem:} if $f$ satisfies the hypotheses of the MVT, and further $f'(x_0)=0$ for every $x \in (a, b)$, then $f$ is a constant function
     \i \tb{Darboux's theorem:} Let $f : (a, b) \rightarrow\mathbb{R}$ be a differentiable function. If $c,~ d,~ c < d$ are points in $(a, b)$, then for every $u$ between $f'(c)$ and $f'(d)$, there exists an $x$ in $[c, d]$ such that $f'(x)=u$
     \i A point $x_0$ in $(a, b)$ such that $f'(x_0)=0$ is often called a {\color{lg}stationary point}
     \i \tb{Second derivative test:} assume that $f : [a, b] \rightarrow\mathbb{R}$ is a continuous function and that $f$ is differentiable on $(a, b)$. Also assume that $f'(x)$ is differentiable at $x_0$, that is, that the second derivative $f''(x_0)$ exists. Then:
@@ -227,7 +230,7 @@ right  = 3.00cm]{geometry}
     \i The space $\mathcal{C}^k(I)$, will denote the space of $k$ times continuously differentiable functions on an (open) interval $I$, for some fixed $k \in \mathbb{N}$, that is, the space of functions for which $k$ derivatives exist and such that the $k^{th}$ derivative is a continuous function. The space $\mathcal{C}^\infty (I)$ will consist of functions that lie in $\mathcal{C}^k(I)$ for every $k \in \mathbb{N}$. Such functions are called {\color{lg}smooth} or {\color{lg}infinitely differentiable functions.}
     \i \tb{The Taylor polynomials:} given a function $f (x)$ which is $n$ times differentiable at some point $x_0$ in an interval $I$, we can associate to it a family of polynomials $P_0(x),~ P_1(x),\ldots,~ P_n(x)$ called the Taylor polynomials of degrees $0,~ 1, \ldots ~n$ at $x_0$ as follows:
     \b{equation*}
-       P_n(x)=f(x_0)+f^{(1)}(x_0)(x-x_0)+\frac{f^{(2)}(x_0)}{2!}(x-x_0)^2+\ldots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n
+       P_n(x)=f(x_0)+f^{1}(x_0)(x-x_0)+\frac{f^{2}(x_0)}{2!}(x-x_0)^2+\ldots+\frac{f^{n}(x_0)}{n!}(x-x_0)^n
     \e{equation*}
     \i \tb{Theorem:} let $I$ be an open interval and suppose that $[a, b] \subset I$. Suppose that $f\in \mathcal{C}^n(I) ~(n\geq 0)$ and suppose that $f^{(n)}$ is differentiable on $I$. Then there exists $c \in (a, b)$ such that:
     \b{equation*}
@@ -236,7 +239,7 @@ right  = 3.00cm]{geometry}
     where $P_n(x)$ denotes the Taylor polynomial of degree $n$ at $a$.
     \i We sometimes write:
     \b{equation*}
-       P_n(x)=\sum_{k~=~0}^{n}\frac{f_{(k)}(a)}{k!}(x-a)^k, ~ and~ R_n(x)=\frac{f_{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}
+       P_n(x)=\sum_{k~=~0}^{n}\frac{f^{k}(a)}{k!}(x-a)^k, ~ and~ R_n(x)=\frac{f^{n+1}(c)}{(n+1)!}(x-a)^{n+1}
     \e{equation*}
     Thus we can also write $f(b)=P_n(b)+R_n(b)$
     \i When $n = 0$ in Taylor’s Theorem we get the MVT. When $n = 1$, we get the Extended Mean Value Theorem.
@@ -256,7 +259,7 @@ right  = 3.00cm]{geometry}
     \e{equation*}
     We can think of the points of the partition as dividing the original interval $[a, b]$ into sub-intervals $I_j = [x_{j-1}, x_j ],~ 1 \geq j \geq n$
     \i \tb{Def:} A partition $P'=\{a=x'_0<x'_1<\ldots <x'_{n-1}<x'_n=b\}$ is said to be a {\color{lg}refinement} of the partition $P$ if for each $x_i \in P$, there exists an $x'_j\in P'$ such that $x_i=x'_j$. Intuitively, a refinement $P'$ of a partition $P$ will break some of the sub-intervals in $P$ into smaller sub-intervals.
-    \i \tb{Def:} Given a partition $P=\{a=x_0<x_1<\ldots <x_{n-1}<x_n=b\}$ and a function $f : [a, b] \rightarrow\mathbb{R}$, we define two associated quantities. First we set: $M_i=\sup_{x\hspace{0.05cm}\in\hspace{0.05cm}[x_{i-1},x_i]} f(x)$ and $m_i=\inf_{x\hspace{0.05cm}\in\hspace{0.05cm}[x_{i-1},x_i]} f(x), ~1\geq i\geq n$. We define the {\color{lg}Lower sum} as:
+    \i \tb{Def:} Given a partition $P=\{a=x_0<x_1<\ldots <x_{n-1}<x_n=b\}$ and a function $f : [a, b] \rightarrow\mathbb{R}$, we define two associated quantities. First we set: $M_i=\sup_{x\hspace{0.05cm}\in\hspace{0.05cm}[x_{i-1},x_i]} f(x)$ and $m_i=\inf_{x\hspace{0.05cm}\in\hspace{0.05cm}[x_{i-1},x_i]} f(x), ~1\leq i\leq n$. We define the {\color{lg}Lower sum} as:
     \b{equation*}
        L(f,P)=\sum_{j~=~1}^n m_j(x_j-x_{j-1})
     \e{equation*}
@@ -270,7 +273,7 @@ right  = 3.00cm]{geometry}
     \e{equation*}
     where the supremum is taken over all partitions of $[a,b]$. Similarly, we define the {\color{lg}upper Darboux integral} of $f$ by:
     \b{equation*}
-       U(f)=\sup\{U(f,P)~:~P\text{ is a partition of}~ [a,b]\}
+       U(f)=\inf\{U(f,P)~:~P\text{ is a partition of}~ [a,b]\}
     \e{equation*}
     and again the infimum is over all partitions of $[a,b]$. If $L(f)=U(f)$, then we say that $f$ is Darboux-integrable and define:
     \b{equation*}
@@ -323,7 +326,7 @@ right  = 3.00cm]{geometry}
         \b{equation*}
          \int_{a}^{b} f(t)dt=g(b)-g(a)
         \e{equation*}
-        Note that this statement does not assume that the function $f (t)$ is continuous
+        Note that this statement does not assume that the function $f (t)$ is continuous.
     \e{itemize}
     \i \tb{The mean value theorem for integration:} let $f : [a, b] \rightarrow\mathbb{R}$ be a continuous function and assume that $f$ is differentiable in $(a, b)$. The MVT for integration says that there exists $c\in(a,b)$ such that:
     \b{equation*}
@@ -356,7 +359,7 @@ right  = 3.00cm]{geometry}
     \i  All directional derivatives may exist at a point even if the function is discontinuous
     \i The equation of the tangent plane to $z=f(x,y)$ at the point $(x_0,y_0)$ is:
     \b{equation*}
-         f(x_0,y_0)+\frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) + \frac{\partial f}{\partial y}(x_0,y_0)(y-y_0)
+         f(x_0,y_0)+\frac{\partial f}{\partial x}(x_0,y_0)(x-x_0) + \frac{\partial f}{\partial y}(x_0,y_0)(y-y_0)=0
     \e{equation*}
     \i \tb{Differentiability for functions of two variables:} a function $f:U\rightarrow\mathbb{R}$ is said to be differentiable at a point  $(x_0,y_0) $ if $\frac{\partial f}{\partial x}(x_0,y_0)$, and $\frac{\partial f}{\partial y}(x_0,y_0)$ exist and:
     \b{equation*}
@@ -422,7 +425,7 @@ right  = 3.00cm]{geometry}
     \i Notation $f_x$ is for the partial derivative $\frac{\partial f}{\partial x}$
     \i Functions which take values in $\mathbb{R}$ are called {\color{lg}scalar valued} functions, and those functions which take values in $\mathbb{R}^n$, $n>1$ are called {\color{lg}vector valued} functions
     \i Limit and continuity of $n$ variable functions are analogous to the previous cases
-    \i \tb{Theorem:} let $U$ be a subset of $\mathbb{R}^m~(m=1,2,2,\ldots)$. The function $f : U \rightarrow\mathbb{R}^n$ is continuous if and only if each of the functions $f_i : U \rightarrow\mathbb{R}, ~1 \leq i \leq n$, is continuous
+    \i \tb{Theorem:} let $U$ be a subset of $\mathbb{R}^m~(m=1,2,2,\ldots)$. The function $f : U \rightarrow\mathbb{R}^n$ is continuous if and only if each of the functions $f_i : U \rightarrow\mathbb{R}, ~1 \leq i \leq n$, is continuous.
     \i When m = n, vector valued functions are often called {\color{lg}vector fields}
     \i  In physics, vector force fields that arise from scalar potential functions are called {\color{lg}conservative fields}
     \i \tb{Def:}  a function $f : U \rightarrow\mathbb{R}^n$, where $U$ is a subset of $\mathbb{R}^m$ is said to be differentiable at a point $x$ if there exists an $n\times m$ matrix $Df(x)$ such that:
@@ -489,7 +492,7 @@ right  = 3.00cm]{geometry}
     \b{equation*}
     q(x_1,x_2,\ldots,x_n)=\sum_{1\hspace{0.05cm}\leq\hspace{0.05cm} i,\hspace{0.05cm}j\hspace{0.05cm}\leq\hspace{0.05cm} n}q_{ij}\hspace{0.05cm}x_i\hspace{0.05cm} x_j,~\hspace{0.05cm} a_{ij}\in\mathbb{R}
     \e{equation*}
-    The example $x_1^2+x_2^2+x_3^2+x_4^2$ is an example of a quartenary quadratic form. It is a {\color{lg}diagonal form}, that is, only square terms appear.
+    The example $x_1^2+x_2^2+x_3^2+x_4^2$ is an example of a quartenary quadratic form. It is a {\color{lg}diagonal form,} that is, only square terms appear.
     \i A quadratic form is called positive definite if $q(x_1,\ldots,x_n)>0$ for all $(x_1,\ldots,x_n)$ in $\mathbb{R}^n\backslash \{(0,0,\ldots,0)\}$
     \i \tb{The Bhargava-Hanke theorem:} if a positive definite (integral) quadratic form represents every number $n \leq 290$, then it represents all natural numbers
     \i Any rectangle $R$ in the plane can be described as the set of points in the cartesian product $[a, b] \times [c, d]$ of two closed intervals
