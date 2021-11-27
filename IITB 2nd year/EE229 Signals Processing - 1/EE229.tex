@@ -90,11 +90,11 @@ right  = 3.00cm]{geometry}
     \e{equation*}
     \i Some definitions:
     \b{itemize}
-        \item[$-$] \tb{amplitude scaling of signals :} $y(t)= \alpha\hspace{0.05cm} x(t), ~\alpha \in \mathbb{R} ~\text{or}~ \alpha \in \mathbb{C}$ 
-        \item[$-$] \tb{time-scaling :} $y(t)=  x(\alpha \hspace{0.05cm}t), ~\alpha \in \mathbb{R}$  
-        \item[$-$] \tb{time-shift :} $y(t)=  x(t - \tau), ~\tau \in \mathbb{R}$  
-        \item[$-$] \tb{time-reversal :} $y(t)=  x(-t)$
-        \item[$-$] \tb{DC offset :} $y(t)= \alpha + x(t)$  
+        \item[$-$] \tb{amplitude scaling of signals:} $y(t)= \alpha\hspace{0.05cm} x(t), ~\alpha \in \mathbb{R} ~\text{or}~ \alpha \in \mathbb{C}$ 
+        \item[$-$] \tb{time-scaling:} $y(t)=  x(\alpha \hspace{0.05cm}t), ~\alpha \in \mathbb{R}$  
+        \item[$-$] \tb{time-shift:} $y(t)=  x(t - \tau), ~\tau \in \mathbb{R}$  
+        \item[$-$] \tb{time-reversal:} $y(t)=  x(-t)$
+        \item[$-$] \tb{DC offset:} $y(t)= \alpha + x(t)$  
     \e{itemize}
 \e{itemize}
 
@@ -177,7 +177,7 @@ right  = 3.00cm]{geometry}
     \end{figure}
     \i Generalized echo system:
     \b{equation*}
-       y(t) = \sum_{l~ = ~0}^{L} \alpha_l x(t - \tau_l)
+       y(t) = \sum_{l\hspace{0.05cm} = \hspace{0.05cm}0}^{L} \alpha_l x(t - \tau_l)
     \e{equation*}
     \begin{figure}[H]
     \centering
@@ -193,7 +193,7 @@ right  = 3.00cm]{geometry}
     \i \tb{linear time-invariant (LTI) system} - systems that are both linear and time-invariant
     \i {\color{blue}Convolution sum} or {\color{blue}superposition sum} of two discrete-time LTI systems $x[n]$ and $h[n]$:
     \b{equation*}
-       x[n]*h[n] = \sum_{k=-\infty}^{\infty} x[k]h[n-k]
+       x[n]*h[n] = \sum_{k\hspace{0.05cm}=\hspace{0.05cm}-\infty}^{\infty} x[k]h[n-k]
     \e{equation*}
     \i {\color{blue}Convolution integral} or {\color{blue}superposition integral} of two continuous-time LTI systems $x(t)$ and $h(t)$:
     \b{equation*}
@@ -219,21 +219,19 @@ right  = 3.00cm]{geometry}
     \e{equation*}
     \i A discrete-time LTI system is stable if the impulse response is absolutely summable, i.e., if:
     \b{equation*}
-       \sum_{k = -\infty}^{\infty} |h[k]| < \infty
+       \sum_{k \hspace{0.05cm}=\hspace{0.05cm} -\infty}^{\infty} |h[k]| < \infty
     \e{equation*}
     \i Zero-order hold and first-order hold:
     \begin{figure}[H]
     \centering
     \begin{minipage}{.5\textwidth}
     \centering
-    \includegraphics[width=.4\linewidth]{EE229 images/Zero-order hold.png}
-    \captionof{figure}{Zero-order hold}
+    \includegraphics[width=.5\linewidth]{EE229 images/Zero-order hold.png}
     \label{fig:test1}
     \end{minipage}%
     \begin{minipage}{0.5\textwidth}
     \centering
-    \includegraphics[width=.35\linewidth]{EE229 images/First-order hold.png}
-    \captionof{figure}{First-order hold}
+    \includegraphics[width=.45\linewidth]{EE229 images/First-order hold.png}
     \label{fig:test2}
     \end{minipage}
     \end{figure}
@@ -248,23 +246,23 @@ right  = 3.00cm]{geometry}
 \b{itemize}
     \i An even function can be represented as:
     \b{equation*}
-       f(x) = \sum_{m \geq 0}^{} a_m\cos(\frac{2\pi}{T}mx) ,~\text{for}~ \frac{-T}{2} \leq x  \leq \frac{T}{2}
+       f(x) = \sum_{m \hspace{0.05cm}\geq\hspace{0.05cm} 0}^{} a_m\cos(\frac{2\pi}{T}mx) ,~\text{for}~ \frac{-T}{2} \leq x  \leq \frac{T}{2}
     \e{equation*}
     \i An odd function can be represented as:
     \b{equation*}
-       f(x) = \sum_{m \geq 1}^{} b_m\sin(\frac{2\pi}{T}mx) ,~\text{for}~ \frac{-T}{2} \leq x  \leq \frac{T}{2}
+       f(x) = \sum_{m \hspace{0.05cm}\geq \hspace{0.05cm}1}^{} b_m\sin(\frac{2\pi}{T}mx) ,~\text{for}~ \frac{-T}{2} \leq x  \leq \frac{T}{2}
     \e{equation*}
     \i Functions $g_1,~g_2$ such that $\langle g_1,~g_2 \rangle = 0$ for $t \in T$ is said
     to be orthogonal in $T$.
     \i A representation of a periodic signal as a combination of complex exponentials of discrete frequencies, which are multiples of the fundamental frequency of the signal, is known as the Fourier series representation of the signal
     \b{equation*}
-       x(t) = \alpha_0 + \sum_{n\geq 1}^{} a_n\cos(\frac{2\pi}{T_d}nT) + \sum_{n \geq1}^{} b_n\sin(\frac{2\pi}{T_d}nT) 
+       x(t) = \alpha_0 + \sum_{n\hspace{0.05cm}\geq \hspace{0.05cm}1}^{} a_n\cos(\frac{2\pi}{T_d}nT) + \sum_{n\hspace{0.05cm} \geq \hspace{0.05cm}1}^{} b_n\sin(\frac{2\pi}{T_d}nT) 
     \e{equation*}
     \b{equation*}
-      = \alpha_0 + \sum_{n \geq 1}^{} a_n\frac{(e^{j\frac{2\pi}{T_d}nt} + e^{-j\frac{2\pi}{T_d}nt})}{2} + \sum_{n \geq 1}^{} b_n\frac{(e^{j\frac{2\pi}{T_d}nt} - e^{-j\frac{2\pi}{T_d}nt})}{2j}
+      = \alpha_0 + \sum_{n\hspace{0.05cm} \geq\hspace{0.05cm} 1}^{} a_n\frac{(e^{j\frac{2\pi}{T_d}nt} + e^{-j\frac{2\pi}{T_d}nt})}{2} + \sum_{n \hspace{0.05cm}\geq \hspace{0.05cm}1}^{} b_n\frac{(e^{j\frac{2\pi}{T_d}nt} - e^{-j\frac{2\pi}{T_d}nt})}{2j}
     \e{equation*}
     \b{equation*}
-      = \sum_{m \in \mathbb{Z}}^{} \alpha_m e^{j\frac{2\pi}{T_d}mt}
+      = \sum_{m \hspace{0.05cm}\in \hspace{0.05cm}\mathbb{Z}}^{} \alpha_m e^{j\frac{2\pi}{T_d}mt}
     \e{equation*}
     \b{equation*}
       \text{where} ~\alpha_m = \frac{a_m - b_m}{2},~ m \in \mathbb{Z}^{+}~ \text{and}~ \alpha_m = \frac{a_{|m|} + b_{|m|}}{2}, m \in \mathbb{Z}^{-}
@@ -304,17 +302,17 @@ whenever it is continuous at $t$
         \e{equation*}
         \item[$-$] \tb{Time scaling:}\\
         \b{equation*}
-            x(t) = \sum_{k = -\infty}^{\infty} a_k e^{(j\frac{2\pi}{T}kt)}
+            x(t) = \sum_{k \hspace{0.05cm}=\hspace{0.05cm} -\infty}^{\infty} a_k e^{(j\frac{2\pi}{T}kt)}
         \e{equation*}
         \b{equation*}
-            x(\alpha t) = \sum_{k = -\infty}^{\infty} a_k e^{(j\frac{2\pi}{T}k\alpha t)}
+            x(\alpha t) = \sum_{k\hspace{0.05cm} = \hspace{0.05cm}-\infty}^{\infty} a_k e^{(j\frac{2\pi}{T}k\alpha t)}
         \e{equation*}
         \item[$-$] \tb{Multiplication:}\\
         \b{equation*}
-            \text{If}~~ x(t) \xleftrightarrow{\mathcal{~FS~}} a_k~ ~and~~y(t) \xleftrightarrow{\mathcal{~FS~}} b_k, ~ \text{then}
+            \text{If}~~ x(t) \xleftrightarrow{\mathcal{~FS~}} a_k~ ~\text{and}~~y(t) \xleftrightarrow{\mathcal{~FS~}} b_k, ~ \text{then}
         \e{equation*}
         \b{equation*}
-            z(t) = x(t)y(t) \xleftrightarrow{\mathcal{~FS~}} c_k = \sum_{l = -\infty}^{\infty} a_l b_{k-l}
+            z(t) = x(t)y(t) \xleftrightarrow{\mathcal{~FS~}} c_k = \sum_{l \hspace{0.05cm}= \hspace{0.05cm}-\infty}^{\infty} a_l b_{k-l}
         \e{equation*}
         \item[$-$] \tb{Conjugation:}\\
         \b{equation*}
@@ -329,11 +327,11 @@ whenever it is continuous at $t$
         \item[$-$] If $x(t) = \sum_{m  \in  \mathbb{Z}}^{} \beta_m \phi_m t~$ with  $\langle \phi_m,~\phi_n \rangle = \delta [m-n]$ in $\frac{-T}{2} \leq x  \leq \frac{T}{2}$ , then:
     \e{itemize}
     \b{equation*}
-            \int_{-\frac{T}{2}}^{\frac{T}{2}} |x(t)|^2 dt = \sum_{m~\in ~ \mathbb{Z}}^{} |\beta_m|^2
+            \int_{-\frac{T}{2}}^{\frac{T}{2}} |x(t)|^2 dt = \sum_{m\hspace{0.05cm}\in \hspace{0.05cm} \mathbb{Z}}^{} |\beta_m|^2
     \e{equation*}
     \i The total average power in a periodic signal equals the sum of the average powers in all of its harmonic components:
     \b{equation*}
-            \frac{1}{T} \int_{-\frac{T}{2}}^{\frac{T}{2}} |x(t)|^2 dt = \sum_{m~\in ~ \mathbb{Z}}^{} |\alpha_m|^2
+            \frac{1}{T} \int_{-\frac{T}{2}}^{\frac{T}{2}} |x(t)|^2 dt = \sum_{m\hspace{0.05cm}\in \hspace{0.05cm} \mathbb{Z}}^{} |\alpha_m|^2
     \e{equation*}
     \i A function $h(t)$ is integrable if $ \int_{\mathbb{R}}^{} |h(t)|dt < \infty$
     \i \b{equation*}
@@ -363,7 +361,7 @@ whenever it is continuous at $t$
     \end{figure}
     \i \tb{Poisson summation formula:} For an integrable $x(t)$ with Fourier transform $H(f)$ - 
     \b{equation*}
-           \sum_{n \in \mathbb{Z}}^{}x(t - nT) = \sum_{m  \in \mathbb{Z}}^{} \alpha_m e^{(\frac{2\pi}{T} mt)},
+           \sum_{n\hspace{0.05cm} \in\hspace{0.05cm} \mathbb{Z}}^{}x(t - nT) = \sum_{m \hspace{0.05cm} \in\hspace{0.05cm} \mathbb{Z}}^{} \alpha_m e^{(\frac{2\pi}{T} mt)},
     \e{equation*}\\
     \hspace{2cm}at points of continuity of the LHS, where
     \b{equation*}
@@ -392,12 +390,12 @@ whenever it is continuous at $t$
     \e{equation*}\\
     where $H(f)$ is the Fourier transform of signal $x(t)$
     \i \tb{Poisson sum:} Fourier transform (Generalized) of an impulse train:
-    $$ \sum_{n\in\mathbb{Z}} \delta(t-nT)  \xrightleftharpoons[]{F.T.} \sum_{m\in\mathbb{Z}} \frac{1}{T}\delta(f-\frac{m}{T})$$
+    $$ \sum_{n\hspace{0.05cm}\in\hspace{0.05cm}\mathbb{Z}} \delta(t-nT)  \xrightleftharpoons[]{F.T.} \sum_{m\hspace{0.05cm}\in\hspace{0.05cm}\mathbb{Z}} \frac{1}{T}\delta(f-\frac{m}{T})$$
     \i \tb{Dual FS formula:} 
-    $$ \sum_{n\in\mathbb{Z}} X(f+n\beta) \xrightleftharpoons[]{I.F.T.} \sum_{m\in\mathbb{Z}} \frac{1}{\beta}x(\frac{m}{\beta})\delta(t-\frac{m}{\beta}) $$
+    $$ \sum_{n\hspace{0.05cm}\in\hspace{0.05cm}\mathbb{Z}} X(f+n\beta) \xrightleftharpoons[]{I.F.T.} \sum_{m\hspace{0.05cm}\in\hspace{0.05cm}\mathbb{Z}} \frac{1}{\beta}x(\frac{m}{\beta})\delta(t-\frac{m}{\beta}) $$
     \i \tb{Shannon's reconstruction formula:}
     \b{equation*}
-           x(t) = \sum_{m\in\mathbb{Z}} x(\frac{m}{\beta}) \hspace{0.1cm} sinc (\beta t-m)
+           x(t) = \sum_{m\hspace{0.05cm}\in\hspace{0.05cm}\mathbb{Z}} x(\frac{m}{\beta}) \hspace{0.1cm} sinc (\beta t-m)
     \e{equation*}
     \i \tb{Parseval's relation:}
     \b{equation*}
@@ -421,8 +419,8 @@ whenever it is continuous at $t$
     \i \tb{Def:} Dirac Delta is defined as a non-negative unit area operator such that:
     $$ \int_{\mathbb{R}} x(t)\delta(t)dt=x(0),~~~\text{whenever} ~x(0^+)=x(0^-)=x(0)$$
     \i Fourier transform and inverse for Diracs:
-    $$ \delta(t) \xrightleftharpoons[]{F.T.} \mathbb{I}_{\{f\in\mathbb{R}\}} $$
-    $$  \mathbb{I}_{\{t\in\mathbb{R}\}} \xrightleftharpoons[]{F.T.} \delta(f) $$
+    $$ \delta(t) \xrightleftharpoons[]{F.T.} \mathbb{I}_{\{f\hspace{0.05cm}\in\hspace{0.05cm}\mathbb{R}\}} $$
+    $$  \mathbb{I}_{\{t\hspace{0.05cm}\in\hspace{0.05cm}\mathbb{R}\}} \xrightleftharpoons[]{F.T.} \delta(f) $$
 \e{itemize}    
 
 \phantomsection
@@ -433,9 +431,9 @@ whenever it is continuous at $t$
     \i \tb{Inverse DTFT:} given samples $x[n],~n\in\mathbb{Z}$, having a DTFT $\hat{X}(f),~-\frac{1}{2}\leq f\leq\frac{1}{2}$:
     $$ x[n]=\int_{-\frac{1}{2}}^{\frac{1}{2}} \hat{X}(f)e^{(j 2 \pi f n )}$$
     \i \tb{Discrete Fourier transform (DFT):} 
-    $$ X[k] = \hat{X} \bigg [\frac{k}{N}\bigg ] = \sum_{n=0}^{N-1}x[n] e^{(-j2\pi \frac{k}{N}n)} $$
+    $$ X[k] = \hat{X} \bigg [\frac{k}{N}\bigg ] = \sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{N-1}x[n] e^{(-j2\pi \frac{k}{N}n)} $$
     \i \tb{Matrix form of DFT:} 
-    $$ \text{DFT:    }~~\overline{X}=F\overline{x}$$
+    $$ \text{DFT:    }~~\overline{X}=F\hspace{0.05cm}\overline{x}$$
     $$ \text{where F }= \begin{bmatrix}
                         \alpha_{0}^{0} & \alpha_{0}^{1} & \alpha_{0}^{2} & \ldots & \alpha_{0}^{M}\\
                         \alpha_{1}^{0} & \alpha_{1}^{1} & \alpha_{1}^{2} & \ldots & \alpha_{1}^{M}\\
@@ -449,14 +447,14 @@ whenever it is continuous at $t$
     0\leq i\leq N-1),~~M=N-1 $$ 
     \tb{Proposition:} 
     $$F^HF=N\mathbb{I}_N$$
-    \i \tb{Circular convolution ($\circledast$):} let $x_c[n]=\sum_{i\in\mathbb{Z}}x[n+iN] ~\rightarrow ~ x_c[i] = x[i+N]$ for $-N\leq i \leq -1$, then:
-    $$ x_c[n] \circledast h[n] = \sum_{n=0}^{N-1} h[n] x_c[k-n] $$
+    \i \tb{Circular convolution ($\circledast$):} let $x_c[n]=\sum_{i\hspace{0.05cm}\in\hspace{0.05cm}\mathbb{Z}}x[n+iN] ~\rightarrow ~ x_c[i] = x[i+N]$ for $-N\leq i \leq -1$, then:
+    $$ x_c[n] \circledast h[n] = \sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{N-1} h[n] x_c[k-n] $$
     \i Circular convolution is commutative
     \i \tb{Proposition:}
     $$x[n] \circledast h[n] \xrightleftharpoons[]{DFT} X[k]H[k] $$
     \i \tb{Nyquist condition:} to get the samples back it should satisfy the following condition:
-    $$ \sum_{m\in\mathbb{Z}} H(f_m f_s) = 1, ~~\forall f\in \mathbb{R} $$
-    \i In signal processing one addition + one multiplication in matrix multiplication is termed a {\color{blue}flop} or {\color{blue}computation}. Matrix multiplication requires $O(N^2)$ computations
+    $$ \sum_{m\hspace{0.05cm}\in\hspace{0.05cm}\mathbb{Z}} H(f_m f_s) = 1, ~~\forall f\in \mathbb{R} $$
+    \i In signal processing one addition + one multiplication in matrix multiplication is termed a {\color{blue}flop} or {\color{blue}computation.} Matrix multiplication requires $O(N^2)$ computations.
     \i \tb{Butterfly structure of FFT:}
     \begin{figure}[H]
     \centering
@@ -465,11 +463,11 @@ whenever it is continuous at $t$
     \i For integrable $x(t)$ with $y(t)=x'(t)$ as its derivative:
     $$Y(f)=j2\pi f X(f) $$
     \i For $x(t)=c+\tilde{x}(t)$, where $\tilde{x}(t)$ is integrable with derivative $y(t)$:
-    $$ \tilde{X}(f) = \frac{Y(f)}{j2\pi f} \mathbb{I}_{\{f\neq 0\}} $$
+    $$ \tilde{X}(f) = \frac{Y(f)}{j2\pi f}\hspace{0.05cm} \mathbb{I}_{\{f\hspace{0.05cm}\neq \hspace{0.05cm}0\}} $$
     since $x(t)=c+\tilde{x}(t)$ for some $c\in \mathbb{C}$:
     $$X(f)= \tilde{X}(f) +c\hspace{0.05cm} \delta(f)=\frac{Y(f)}{j2\pi f} +c \hspace{0.05cm}\delta (f) $$
     \i \tb{Z-transform:}
-    $$H(z)=\sum_{n\in\mathbb{Z}} h[n]z^{-n} $$
+    $$H(z)=\sum_{n\hspace{0.05cm}\in\hspace{0.05cm}\mathbb{Z}} h[n]z^{-n} $$
     polynomial in $z$, which can take complex values
     \i If $x[n]\xrightleftharpoons[]{Z.T.} X(z)$, then $x[n-m]\xrightleftharpoons[]{Z.T.}z_{-m} X(z)$
     \i The DTFT $\hat{X}(f)$ is given by $X(z)$ at $z = e^{(j2\pi f)}$ \i Feedback IIR implementation:
@@ -484,32 +482,8 @@ whenever it is continuous at $t$
     \i For a frequency response:
     $$\hat{H}(f)=\frac{1}{1-ae^{(-j2\pi f)}},~~~-\frac{1}{2}\leq f\leq \frac{1}{2}$$
     \b{itemize}
-        \item[$-$] for $a=1,~~|\hat{H}(f)|=\frac{1}{2 sin(\pi f)}~~\rightarrow~~|\hat{H}(f)|=\infty\text{ at } f=0$. The system is not BIBO stable (true for $|a|=1$) 
-        \item[$-$] for $a=|a|e^{j\theta},~~|\hat{H}(f)|=\frac{1}{\sqrt{(1+|a|)^2-4|a|cos^2(\frac{\theta}{2}+\pi f)}}$. The system is stable for $|a|<1$. For $|a|>1$, the system is BIBO unstable.
+        \item[$-$] for $a=1,~~|\hat{H}(f)|=\frac{1}{2 \hspace{0.05cm}sin(\pi f)}~~\rightarrow~~|\hat{H}(f)|=\infty\text{ at } f=0$. The system is not BIBO stable (true for $|a|=1$) 
+        \item[$-$] for $a=|a|e^{j\theta},~~|\hat{H}(f)|=\frac{1}{\sqrt{(1+|a|)^2-4|a|\hspace{0.05cm}cos^2(\frac{\theta}{2}+\pi f)}}$. The system is stable for $|a|<1$. For $|a|>1$, the system is BIBO unstable.
     \e{itemize}
-    \i 
-    
-    
-    
-    
-    
-    
-    
-    
-\e{itemize} 
-
-% \phantomsection
-% \section*{\color{- }Dirac's formalisms}
-% \addcontentsline{toc}{section}{\large\color{- }Dirac's formalisms}
-
-% \b{itemize}
-%     \i
-    
-    
-    
-    
-% \e{itemize} 
-    
-    
-
+\e{itemize}
 \e{document}
