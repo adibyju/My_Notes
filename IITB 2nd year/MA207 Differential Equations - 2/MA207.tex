@@ -80,18 +80,18 @@ right  = 3.00cm]{geometry}
 \b{itemize}
     \i For real numbers $x_0, a_0, a_1, a_2,\ldots,$ an infinite series:
     \b{equation*}
-        \sum_{n~=~0}^{\infty} a_n (x-x_0)^n = a_0+a_1(x-x_0)+a_2(x-x_0)^2+\ldots
+        \sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty} a_n (x-x_0)^n = a_0+a_1(x-x_0)+a_2(x-x_0)^2+\ldots
     \e{equation*}
     is called a {\color{b}power series in $x-x_0$ with center $x_0$}
     \i For a real number $x_1$, if the limit:
     \b{equation*}
-        \lim_{N~\rightarrow~\infty} \sum_{n~=~0}^{N} a_(x_1-x_0)^n
+        \lim_{N\hspace{0.05cm}\rightarrow\hspace{0.05cm}\infty} \sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{N} a_n(x_1-x_0)^n
     \e{equation*}
     exists and is finite, then we say the power series {\color{b}converges} at the point $x=x_1$. In this case, the value of the series at $x_1$ is, by definition, the value of the limit.
     \i If the series does not converge at $x_1$, that is, either the limit does not exist, or it is $\pm\infty$, then we say the power series {\color{b}diverges} at $x_1$. Also, a power series always converges at its center $x=x_0$.
     \i \tb{radius of convergence (R):} for any power series:
     \b{equation*}
-        \sum_{n~=~0}^{\infty} a_n (x-x_0)^n
+        \sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty} a_n (x-x_0)^n
     \e{equation*}
     exactly one of these statements is true:
     \b{itemize}
@@ -101,54 +101,54 @@ right  = 3.00cm]{geometry}
     \e{itemize}
     \i \tb{Ratio test:} assume that there is an integer $N$ such that for all $n \geq N$ we have an $a_n \neq 0$ Also assume the following limit exists:
     \b{equation*}
-        \lim_{n~\rightarrow~\infty} \bigg\vert\frac{a_{n+1}}{a_n}\bigg\vert
+        \lim_{n\hspace{0.05cm}\rightarrow\hspace{0.05cm}\infty} \bigg\vert\frac{a_{n+1}}{a_n}\bigg\vert
     \e{equation*}
-    and denote it by $L$. Then radius of convergence of the power series $\sum_{n~=~0}^{\infty} a_n (x-x_0)^n$ is $R=\frac{1}{L}$.
-    \i \tb{Def:} Suppose we are given a sequence $\{a_n\}_{n\geq1}$. For every $k\geq1$ define:
+    and denote it by $L$. Then radius of convergence of the power series $\sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty} a_n (x-x_0)^n$ is $R=\frac{1}{L}$.
+    \i \tb{Def:} Suppose we are given a sequence $\{a_n\}_{n\hspace{0.05cm}\geq\hspace{0.05cm}1}$. For every $k\geq1$ define:
     \b{equation*}
-        b_k=\sup_{n\geq k}\{a_n\}
+        b_k=\sup_{n\hspace{0.05cm}\geq\hspace{0.05cm} k}\{a_n\}
     \e{equation*}
-    We know $\{b_k\}_{k\geq1}$ is a decreasing sequence, and hence we define {\color{b}$\limsup \{a_n\}$} as:
+    We know $\{b_k\}_{k\hspace{0.05cm}\geq\hspace{0.05cm}1}$ is a decreasing sequence, and hence we define {\color{b}$\limsup \{a_n\}$} as:
     \b{equation*}
-        \limsup \{a_n\}=\lim_{n~\rightarrow~\infty}b_n
+        \limsup \{a_n\}=\lim_{n\hspace{0.05cm}\rightarrow\hspace{0.05cm}\infty}b_n
     \e{equation*}
     Similarly, we define {\color{b}$\liminf \{a_n\}$}, by replacing $\sup$ by $\inf$ in the above definition.
-    \i For a sequence $\{a_n\}_{n\geq1}$, the limit may not exist. However, the $\limsup$ and $\liminf$ always exist (possibly $+\infty$ or $-\infty$)
-    \i \tb{Theorem:} Let $\{a_n\}_{n\geq1}$ be a sequence of real numbers. Then $lim_{n~\rightarrow~\infty}a_n$ exists if and only if $\limsup a_n = \liminf a_n$. Further, if $lim_{n~\rightarrow~\infty}a_n$ exists, then
+    \i For a sequence $\{a_n\}_{n\hspace{0.05cm}\geq\hspace{0.05cm}1}$, the limit may not exist. However, the $\limsup$ and $\liminf$ always exist (possibly $+\infty$ or $-\infty$)
+    \i \tb{Theorem:} Let $\{a_n\}_{n\hspace{0.05cm}\geq\hspace{0.05cm}1}$ be a sequence of real numbers. Then $lim_{n\hspace{0.05cm}\rightarrow\hspace{0.05cm}\infty}a_n$ exists if and only if $\limsup a_n = \liminf a_n$. Further, if $lim_{n\hspace{0.05cm}\rightarrow\hspace{0.05cm}\infty}a_n$ exists, then
     \b{equation*}
-        \limsup \{a_n\}=\liminf \{a_n\}=\lim_{n~\rightarrow~\infty}a_n
+        \limsup \{a_n\}=\liminf \{a_n\}=\lim_{n\hspace{0.05cm}\rightarrow\hspace{0.05cm}\infty}a_n
     \e{equation*}
-    \i \tb{Root test:} let $\limsup \{|a_n|^{1/n}\}=L$. Then radius of convergence of the power series $\sum_{n~=~0}^{\infty} a_n (x-x_0)^n$ is $R=1/L$.
-    \i \tb{Theorem:} Let $R > 0$ be the radius of convergence of the power series $\sum_{n~=~0}^{\infty} a_n (x-x_0)^n$, then the power series converges (absolutely) for all $x\in (x_0-R,x_0+R)$. The open interval $(x_0-R,x_0+R)$ is called the {\color{b}interval of convergence} of the power series.
-    \i \tb{Theorem:} let $R$ be the radius of convergence of the power series $\sum_{n~=~0}^{\infty} a_n (x-x_0)^n$. We assume $R>0$. We define a function $f:(x_0-R,x_0+R)~\rightarrow~\mathbb{R}$ by:
+    \i \tb{Root test:} let $\limsup \{|a_n|^{1/n}\}=L$. Then radius of convergence of the power series\\ $\sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty} a_n (x-x_0)^n$ is $R=1/L$.
+    \i \tb{Theorem:} Let $R > 0$ be the radius of convergence of the power series $\sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty} a_n (x-x_0)^n$, then the power series converges (absolutely) for all $x\in (x_0-R,x_0+R)$. The open interval $(x_0-R,x_0+R)$ is called the {\color{b}interval of convergence} of the power series.
+    \i \tb{Theorem:} let $R$ be the radius of convergence of the power series $\sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty} a_n (x-x_0)^n$. We assume $R>0$. We define a function $f:(x_0-R,x_0+R)~\rightarrow~\mathbb{R}$ by:
     \b{equation*}
-        f(x)=\sum_{n~=~0}^{\infty} a_n (x-x_0)^n
+        f(x)=\sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty} a_n (x-x_0)^n
     \e{equation*}
     This function satisfies the following properties:
     \b{itemize}
         \item[$-$] $f$ is infinitely differentiable $\forall x\in (x_0-R,x_0+R)$
         \item[$-$] the successive derivatives of $f$ can be computed by differentiating the power series term-by-term, that is:
         \b{equation*}
-        f'(x)=\sum_{n~=~0}^{\infty} na_n (x-x_0)^{n-1}
+        f'(x)=\sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty} na_n (x-x_0)^{n-1}
         \e{equation*}
-        \item[$-$] $f_{(k)}(x)=\sum_{n~=~0}^{\infty} n(n-1)\ldots (n-k+1)a_n(x-x_0)^{n-k}$
-        \item[$-$] the power series representing the derivatives $f_{(n)}(x)$ have same radius of convergence $R$
+        \item[$-$] $f^{(k)}(x)=\sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty} n(n-1)\ldots (n-k+1)a_n(x-x_0)^{n-k}$
+        \item[$-$] the power series representing the derivatives $f^{(n)}(x)$ have same radius of convergence $R$
         \item[$-$] we can determine the coefficients $a_n$ (in terms of derivatives of $f$ at $x_0$) as:
         \b{equation*}
-        a_n=\frac{f_{(n)}(x_0)}{n!}
+        a_n=\frac{f^{(n)}(x_0)}{n!}
         \e{equation*}
-        \item[$-$] we can also integrate the function $f(x)=\sum_{n~=~0}^{\infty} a_n (x-x_0)^n$ term-wise, that is, if $[a,b]\subset(x_0-R,x_0+R)$, then:
+        \item[$-$] we can also integrate the function $f(x)=\sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty} a_n (x-x_0)^n$ term-wise, that is, if $[a,b]\subset(x_0-R,x_0+R)$, then:
         \b{equation*}
-        \int_{a}^{b}f(x)dx=\sum_{n~=~0}^{\infty}\frac{a_n}{n+1}(x-x_0)^{n+1}
+        \int_{a}^{b}f(x)dx=\sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty}\frac{a_n}{n+1}(x-x_0)^{n+1}
         \e{equation*}
         \item[$-$] power series representation of $f$ in an open interval $I$ containing $x_0$ is unique, that is, if:
         \b{equation*}
-        f(x)=\sum_{n~=~0}^{\infty} a_n (x-x_0)^n =\sum_{n~=~0}^{\infty} b_n (x-x_0)^n
+        f(x)=\sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty} a_n (x-x_0)^n =\sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty} b_n (x-x_0)^n
         \e{equation*}
         for all $x\in I$,then $a_n=b_n$ for all $n$
         \item[$-$] if:
         \b{equation*}
-        \sum_{n~=~0}^{\infty} a_n (x-x_0)^n =0
+        \sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty} a_n (x-x_0)^n =0
         \e{equation*}
         for all $x\in I$, then $a_n=0$ for all $n$
     \e{itemize}
@@ -171,7 +171,7 @@ right  = 3.00cm]{geometry}
         \b{equation*}
         \cosh (x)=\sum_{0}^{\infty} \frac{x^{2n}}{(2n)!}~,~~-\infty<x<\infty
         \e{equation*}
-    \i If $f(x)=\sum_{n~=~0}^{\infty} a_n (x-x_0)^n,~g(x)=\sum_{n~=~0}^{\infty} b_n (x-x_0)^n$ have radii of convergence $R_1$ and $R_2$ respectively, then:
+    \i If $f(x)=\sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty} a_n (x-x_0)^n,~g(x)=\sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty} b_n (x-x_0)^n$ have radii of convergence $R_1$ and $R_2$ respectively, then:
     \b{equation*}
         c_1f(x)+c_2g(x)=\sum_{0}^{\infty}(c_1a_n+c_2b_n)(x-x_0)^n
     \e{equation*}
@@ -191,7 +191,7 @@ right  = 3.00cm]{geometry}
     \b{equation*}
         TS~f|_{x_0}=\sum_{0}^{\infty} \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n
     \e{equation*}
-    \i Suppose $f(x)$ is infinitely differentiable at $x_0$ and Taylor series of $f$ at $x_0$ converges to $f(x)$ for all $x$ in some open interval around $x_0$, then $f$ is called {\color{b}analytic} at $x_0$. Thus if $f$ is analytic, then there is an interval $I$ around $x_0$ and $f$ is given by a power series in $I$.
+    \i Suppose $f(x)$ is infinitely differentiable at $x_0$ and Taylor series of $f$ at $x_0$ converges to $f(x)$ for all $x$ in some open interval around $x_0$, then $f$ is called {\color{b}analytic} at $x_0$. Thus if $f$ is analytic, then there is an interval $I$ around $x_0$ where $f$ is given by a power series in $I$.
     \i Polynomials $e^x,~sin (x)$ and $cos (x)$ are analytic at all $x\in\mathbb{R}$. $f(x)=tan (x)$ is analytic at all $x$ except $x=(2n+1)\pi /2$, where $n=\pm 1,\pm 2,\ldots$
     \i If $f(x)$ and $g(x)$ are analytic at $x_0$, then $f(x)\pm g(x)$, $f(x)g(x)$ and $f(x)/g(x) ~ (\text{if}~g(x_0)\neq0)$ are analytic at $x_0$
     \i If $f(x)$ is analytic at $x_0$ and $g(x)$ is analytic at $f(x_0)$, then $g(f(x)) = (g \circ f)(x)$ is analytic at $x_0$
@@ -200,7 +200,7 @@ right  = 3.00cm]{geometry}
     \b{equation*}
         F(x)=\frac{N(x)}{D(x)}
     \e{equation*}
-    be a rational function, where $N(x)$ and $D(x)$ are polynomials without any common factors, that is they do not have any common (complex) zeros. Let $\alpha_1,\ldots, \alpha_r$ be distinct complex zeros of $D(x)$. Then $F(x)$ is analytic at all $x$ except at $x\in \{\alpha_1,\ldots, \alpha_r\}$.If $x_0$ is different from $\{\alpha_1,\ldots, \alpha_r\}$, then the radius of convergence $R$ of the Taylor series of $F$ at $x_0$:
+    be a rational function, where $N(x)$ and $D(x)$ are polynomials without any common factors, that is they do not have any common (complex) zeros. Let $\alpha_1,\ldots, \alpha_r$ be distinct complex zeros of $D(x)$. Then $F(x)$ is analytic at all $x$ except at $x\in \{\alpha_1,\ldots, \alpha_r\}$. If $x_0$ is different from $\{\alpha_1,\ldots, \alpha_r\}$, then the radius of convergence $R$ of the Taylor series of $F$ at $x_0$:
     \b{equation*}
         TS~F|_{x_0}=\sum_{0}^{\infty} \frac{F^{(n)}(x_0)}{n!}(x-x_0)^n
     \e{equation*}
@@ -216,7 +216,7 @@ right  = 3.00cm]{geometry}
     \b{equation*}
         y(x)=\sum_{0}^{\infty} a_n(x-x_0)^n
     \e{equation*}
-    If $R1$ is the radius of convergence of Taylor series of $p(x)$ at $x_0$, $R_2$ is the radius of convergence of Taylor series of $q(x)$ at $x_0$, then radius of convergence of $y(x)$ is at least $\min(R_1, R_2) > 0$
+    If $R_1$ is the radius of convergence of Taylor series of $p(x)$ at $x_0$, $R_2$ is the radius of convergence of Taylor series of $q(x)$ at $x_0$, then radius of convergence of $y(x)$ is at least $\min(R_1, R_2) > 0$
     \i The {\color{b}standard form} of an ordinary differential equation (ODE) is:
     \b{equation*}
         y''+p(x)y'+q(x)y=0
@@ -248,10 +248,10 @@ right  = 3.00cm]{geometry}
     \e{equation*}
     \i The two independent solutions of the Legendre equation are:
     \b{equation*}
-       y_1(x)=a_0\bigg [1-\frac{p(p+1)}{2!}x^2+\frac{p(p+1)(p-2)(p+3)}{4!}x^4+\ldots\bigg]
+       y_1(x)=a_0\bigg [1-\frac{p(p+1)}{2!}x^2+\frac{p(p+1)(p-2)(p+3)}{4!}x^4-\ldots\bigg]
     \e{equation*}
     \b{equation*}
-        y_2(x)=a_1\bigg [x-\frac{(p-1)(p+2)}{3!}x^3+\frac{(p-1)(p+2)(p-3)(p+4)}{5!}x^5+\ldots\bigg]
+        y_2(x)=a_1\bigg [x-\frac{(p-1)(p+2)}{3!}x^3+\frac{(p-1)(p+2)(p-3)(p+4)}{5!}x^5-\ldots\bigg]
     \e{equation*}
     If $p\in \{0,2,4,\ldots\}\cup\{-1,-3,-5,\ldots\}$ then $y_1(x)$ is a polynomial function. $y_2(x)$ is an odd function. If $p\in \{1,3,5,\ldots\}\cup\{-2,-4,-6,\ldots\}$ then $y_2(x)$ is a polynomial function. Thus, if $p$ is an integer then exactly one solution is a polynomial and the other is an infinite power series.
     \i The general solution (of the Legendre equation):
@@ -290,27 +290,27 @@ right  = 3.00cm]{geometry}
     \e{itemize}
     A vector space with an inner product is called an {\color{b}inner product space.}
     \i In an inner product space $V$, two vectors $u$ and $v$ are {\color{b}orthogonal} if $\langle v,v\rangle =0$. More generally, a set of vectors forms an {\color{b}orthogonal system} if they are mutually orthogonal. 
-    \i A set $\{v_i\}_{i\in I}\subset V$ is called a basis if the vectors in it are:
+    \i A set $\{v_i\}_{i\hspace{0.05cm}\in\hspace{0.05cm} I}\subset V$ is called a basis if the vectors in it are:
     \b{itemize}
-        \item[$-$] linearly independent i.e., $\sum_{j~=~1}^{m} a_jv_{i_j}=0~\implies~a_j=0$
-        \item[$-$] they span $V$, i.e., every $w$ can be written as $w=\sum_{j~=~1}^{m} a_jv_{i_j}$
+        \item[$-$] linearly independent i.e., $\sum_{j\hspace{0.05cm}=\hspace{0.05cm}1}^{m} a_jv_{i_j}=0~\implies~a_j=0$
+        \item[$-$] they span $V$, i.e., every $w$ can be written as $w=\sum_{j\hspace{0.05cm}=\hspace{0.05cm}1}^{m} a_jv_{i_j}$
     \e{itemize}
     An {\color{b}orthogonal basis} is an orthogonal system which is also a basis.
     \i Consider the vector space $\mathbb{R}^n$ with coordinate-wise addition and scalar multiplication. The rule:
     \b{equation*}
-         \langle (a_1,\ldots,a_n),(b_1,\ldots,b_n)\rangle= \sum_{i~=~1}^{n} a_ib_i
+         \langle (a_1,\ldots,a_n),(b_1,\ldots,b_n)\rangle= \sum_{i\hspace{0.05cm}=\hspace{0.05cm}1}^{n} a_ib_i
     \e{equation*}
     defines an inner product on $\mathbb{R}^n$. The standard basis $\{e_1,\ldots,e_n\}$ is an orthogonal basis of $\mathbb{R}^n$.
     \i \tb{Lemma:} suppose $V$ is a finite dimensional inner product space, and $e_1,\ldots, e_n$ is an orthogonal basis. Then for any $v \in V$:
     \b{equation*}
-         v=\sum_{i~=~1}^{n} \frac{\langle v,e_i\rangle}{\langle e_i,e_i\rangle}e_i
+         v=\sum_{i\hspace{0.05cm}=\hspace{0.05cm}1}^{n} \frac{\langle v,e_i\rangle}{\langle e_i,e_i\rangle}e_i
     \e{equation*}
     \i \tb{Lemma:} In a finite-dimensional inner product space, there always exists an orthogonal basis. This result is not necessarily true in infinite-dimensional inner product spaces. For infinite dimensional vector spaces, we can only talk of a maximal orthogonal set. A subset $\{e_1, e_2,\ldots\}$ is called a {\color{b}maximal orthogonal set} for $V$ if:
     \b{itemize}
         \item[$-$] $\langle e_i,e_j\rangle=\delta_{ij}$
         \item[$-$] $\langle v,e_i\rangle = 0 $ for all $i$ iff $v=0$
     \e{itemize}
-    \i tb{Def:} for a vector $v$ in an inner product space, we define the {\color{b}norm} or {\color{b}length} of the vector $v$ as:
+    \i \tb{Def:} for a vector $v$ in an inner product space, we define the {\color{b}norm} or {\color{b}length} of the vector $v$ as:
     \b{equation*}
          ||v|| = \langle v,v\rangle^{1/2}
     \e{equation*}
@@ -369,32 +369,32 @@ right  = 3.00cm]{geometry}
     \b{equation*}
          \langle f,g\rangle=\int_{-1}^{1} f(x)g(x)dx
     \e{equation*}
-    \i Legendre polynomials form a {\color{b}maximal orthogonal set} in $L^2([-1, 1])$. This means that a square-integrable function which is orthogonal to all Legendre polynomials is necessarily the constant function ``0". We can expand any square-integrable function $f(x)$ on $[11,1]$ in a series of Legendre polynomials:
+    \i Legendre polynomials form a {\color{b}maximal orthogonal set} in $L^2([-1, 1])$. This means that a square-integrable function which is orthogonal to all Legendre polynomials is necessarily the constant function ``0". We can expand any square-integrable function $f(x)$ on $[-1,1]$ in a series of Legendre polynomials:
     \b{equation*}
-         \sum_{n=0}^{\infty} c_{n} P_{n}(x), \quad c_{n}=\frac{\left\langle f, P_{n}\right\rangle}{\left\langle P_{n}, P_{n}\right\rangle}=\frac{2 n+1}{2} \int_{-1}^{1} f(x) P_{n}(x) d x
+         \sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty} c_{n} P_{n}(x), \quad c_{n}=\frac{\left\langle f, P_{n}\right\rangle}{\left\langle P_{n}, P_{n}\right\rangle}=\frac{2 n+1}{2} \int_{-1}^{1} f(x) P_{n}(x) d x
     \e{equation*}
     This is called the {\color{b}Fourier-Legendre series} (or simply the {\color{b}Legendre series}) of $f(x)$.
     \i \tb{Theorem:} The Fourier-Legendre series of $f(x)\in L^2([-1, 1])$ given by:
     \b{equation*}
-         \sum_{n=0}^{\infty} c_{n} P_{n}(x), \quad c_{n}=\frac{\left\langle f, P_{n}\right\rangle}{\left\langle P_{n}, P_{n}\right\rangle}=\frac{2 n+1}{2} \int_{-1}^{1} f(x) P_{n}(x) d x
+         \sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty} c_{n} P_{n}(x), \quad c_{n}=\frac{\left\langle f, P_{n}\right\rangle}{\left\langle P_{n}, P_{n}\right\rangle}=\frac{2 n+1}{2} \int_{-1}^{1} f(x) P_{n}(x) d x
     \e{equation*}
     converges in $L^2$ norm to f(x), that is:
     \b{equation*}
-         ||f(x)-\sum_{n~=~0}^{m} c_nP_n(x)||~\rightarrow~0 ~~as~~m~\rightarrow~\infty
+         ||f(x)-\sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{m} c_nP_n(x)||~\rightarrow~0 ~~as~~m~\rightarrow~\infty
     \e{equation*}
     \i \tb{Legendre expansion theorem:} if both $f(x)$ and $f'(x)$ have at most a finite number of jump discontinuities in the interval $[-1,1]$, then the Legendre series converges to:
     \b{itemize}
         \item[$-$]
         \b{equation*}
-         \frac{1}{2}(f(x_-)+f(x_+)),~~for~-1<x<1
+         \frac{1}{2}(f(x_-)+f(x_+)),~~\text{for}~-1<x<1
         \e{equation*}
         \item[$-$]
         \b{equation*}
-         f(-1_+),~~for~x=-1
+         f(-1_+),~~\text{for}~x=-1
         \e{equation*}
         \item[$-$]
         \b{equation*}
-         f(1_-),~~for~x=1
+         f(1_-),~~\text{for}~x=1
         \e{equation*}
     \e{itemize}
     In particular, the series converges to $f(x)$ at every point of continuity $x$
@@ -404,7 +404,7 @@ right  = 3.00cm]{geometry}
     $$
     Then the minimizing polynomial is precisely the first $n+1$ terms of the Legendre series of $f(x)$, i.e.:
     $$
-    c_{0} P_{0}(x)+\ldots+c_{n} P_{n}(x) \quad c_{k}=\frac{2 k+1}{2} \int_{-1}^{1} f(x) P_{k}(x) d x
+    c_{0} P_{0}(x)+\ldots+c_{n} P_{n}(x)~, ~~\text{where}~~ c_{k}=\frac{2 k+1}{2} \int_{-1}^{1} f(x) P_{k}(x) d x
     $$
     \i Steps to solve a second order linear ODE using power series:
     \b{itemize}
@@ -418,22 +418,22 @@ right  = 3.00cm]{geometry}
         $$
         Let
         $$
-        p(x):=\frac{F_{1}(x)}{F_{0}(x)} \quad q(x):=\frac{F_{2}(x)}{F_{0}(x)}
+        p(x):=\frac{F_{1}(x)}{F_{0}(x)} \quad \text{and} \quad q(x):=\frac{F_{2}(x)}{F_{0}(x)}
         $$
         \item[$-$] now find the set:
         $$
         U:=\left\{x_{0} \in \mathbb{R} \mid p(x), q(x) \text { are analytic at } x_{0}\right\}
         $$
-        \item[$-$] By the existence theorem, for every $x_{0} \in U$, there will exist two independent solutions to the above ODE, call them $y_{1}(x)$ and $y_{2}(x)$, such that both of them will be analytic in an interval $I$ around $x_{0}$.
-        \item[$-$] To find the solutions in a neighborhood of $x_{0}$, set $y(x)=\sum_{n \geq 0} a_{n}\left(x-x_{0}\right)^{n}$ into the ODE $(1)$ or $(2)$ and get recursive relations involving the $a_{n}$. Note that when you do this, the coefficient functions $\left(p(x), q(x), F_{0}(x), . .\right)$ have to be written as power series in $x-x_{0}$. Note that the recursive relation you get, will be same, irrespective of whether you choose equation $(1)$ or $(2)$
-        \item[$-$] thus, depending on the situation, you may want to choose $1$ or $2$.
+        \item[$-$] By the existence theorem, for every $x_{0} \in U$, there will exist two independent solutions to the above ODE, call them $y_{1}(x)$ and $y_{2}(x)$, such that both of them will be analytic in an interval $I$ around $x_{0}$
+        \item[$-$] To find the solutions in a neighborhood of $x_{0}$, set $y(x)=\sum_{n\hspace{0.05cm} \geq\hspace{0.05cm} 0} a_{n}\left(x-x_{0}\right)^{n}$ into the ODE $(1)$ or $(2)$ and get recursive relations involving the $a_{n}$. Note that when you do this, the coefficient functions $\left(p(x), q(x), F_{0}(x), . .\right)$ have to be written as power series in $x-x_{0}$. Note that the recursive relation you get, will be same, irrespective of whether you choose equation $(1)$ or $(2)$
+        \item[$-$] Thus, depending on the situation, you may want to choose $(1)$ or $(2)$.
         For example, for the Legendre equation, in the open interval $(-1,1)$ around $x_{0}=0$, the equation $(1)$ looks like
         $$
         \left(1-x^{2}\right) y^{\prime \prime}-2 x y^{\prime}+p(p+1) y=0
         $$
         while $(2)$ looks like
         $$
-        y^{\prime \prime}-2\left(\sum_{n \geq 0} x^{2 n+1}\right) y^{\prime}+p(p+1)\left(\sum_{n \geq 0} x^{2 n}\right) y=0
+        y^{\prime \prime}-2\left(\sum_{n\hspace{0.05cm} \geq \hspace{0.05cm}0} x^{2 n+1}\right) y^{\prime}+p(p+1)\left(\sum_{n \hspace{0.05cm}\geq\hspace{0.05cm} 0} x^{2 n}\right) y=0
         $$
         In this case it is clear that, we should choose 1, as it will be easier to work with. 
     \e{itemize}
@@ -452,15 +452,15 @@ right  = 3.00cm]{geometry}
     \b{itemize}
         \item[$-$] $x_{0} \in \mathbb{R}$ is called an {\color{b}ordinary point} of $(1)$ if $p(x)$ and $q(x)$ are analytic at $x_{0}$
         \item[$-$] $x_{0} \in \mathbb{R}$ is called regular singular point if $x_{0}$ is not an ordinary point and both $\left(x-x_{0}\right) p(x)$ and $\left(x-x_{0}\right)^{2} q(x)$ are analytic at $x_{0}$
-        If $x_{0}$ is {\color{b}regular singular} then there are functions $b(x)$ and $c(x)$ which are analytic at $x_{0}$ such that
+        If $x_{0}$ is {\color{b}regular singular} then there are functions $b(x)$ and $c(x)$ which are analytic at $x_{0}$ such that:
         $$
-        p(x)=\frac{b(x)}{\left(x-x_{0}\right)} \quad\quad q(x)=\frac{c(x)}{\left(x-x_{0}\right)^{2}}
+        p(x)=\frac{b(x)}{\left(x-x_{0}\right)} \quad\text{and}\quad q(x)=\frac{c(x)}{\left(x-x_{0}\right)^{2}}
         $$
         \item[$-$] If $x_{0} \in \mathbb{R}$ is not ordinary or regular singular, then we call it {\color{b}irregular singular}
     \e{itemize}
     \i \tb{Cauchy-Euler equation:}
     $$
-    x^{2} y^{\prime \prime}+b_{0} x y^{\prime}+c_{0} y=0 \quad\quad b_{0}, c_{0} \in \mathbb{R}
+    x^{2} y^{\prime \prime}+b_{0} x y^{\prime}+c_{0} y=0~,~~\text{where}~ b_{0}, c_{0} \in \mathbb{R}
     $$
     $x=0$ is a regular singular point, since we can write the ODE as:
     $$
@@ -485,15 +485,18 @@ right  = 3.00cm]{geometry}
         are two independent solutions
     \e{itemize}
     \i \tb{Theorem:} consider the ODE: $$ x^{2} y^{\prime \prime}+x b(x) y^{\prime}+c(x) y=0 ~~~\ldots(1)$$ where $b(x)$ and $c(x)$ are analytic at 0. Then $x=0$ is a regular singular point of the ODE. Then $(1)$ has a solution of the form:
-    $$y(x)=x^{r}_{1} \sum_{n \geq 0} a_{n} x^{n} \quad a_{0} \neq 0, \quad r \in \mathbb{C}~~~\ldots(2)$$ 
+    $$y(x)=x^{r} \sum_{n \hspace{0.05cm}\geq \hspace{0.05cm}0} a_{n} x^{n} ~,\quad a_{0} \neq 0, \quad r \in \mathbb{C}~~~\ldots(2)$$ 
     The solution $(2)$ is called {\color{b}Frobenius solution} or {\color{b}fractional power series solution.} 
-    The power series $\sum_{n \geq 0} a_{n} x^{n}$ converges on $(-\rho, \rho)$, where $\rho$ is the minimum of the radius of convergence of $b(x)$ and $c(x) .$ We will consider the solution $y(x)$ in the open interval $(0, \rho)$.
-    \i \tb{Indicial equation:} An indicial equation, also called a characteristic equation, is a recurrence equation obtained during application of the Frobenius method of solving a second-order ordinary differential equation.
+    The power series $\sum_{n\hspace{0.05cm} \geq \hspace{0.05cm}0} a_{n} x^{n}$ converges on $(-\rho, \rho)$, where $\rho$ is the minimum of the radius of convergence of $b(x)$ and $c(x) .$ We will consider the solution $y(x)$ in the open interval $(0, \rho)$.
+    \i \tb{Indicial equation:} An indicial equation, also called a characteristic equation, is a recurrence equation obtained during application of the Frobenius method of solving a second-order ordinary differential equation
     \i While solving an ODE around a regular singular point by the Frobenius method, the cases encountered are:
     \b{itemize}
-        \item[$-$] roots not differing by an integer
-        \item[$-$] repeated roots
-        \item[$-$] roots differing by a positive integer
+        \item[$-$] roots not differing by an integer. The second root is also of the form:
+        $$y(x)=x^{r_2} \sum_{n \hspace{0.05cm}\geq\hspace{0.05cm} 0} a_{n}(r_2) x^{n}$$
+        \item[$-$] repeated roots. The second root is given by:
+        $$y(x)=\sum_{n \hspace{0.05cm}\geq \hspace{0.05cm}0} a_{n}'(r_2) x^{n+r_2} + \sum_{n \hspace{0.05cm}\geq\hspace{0.05cm} 0} a_{n}(r_2) x^{n+r_2}\hspace{0.05cm} \log x$$
+        \item[$-$] roots differing by a positive integer. The second root is given by:
+        $$y(x)=\sum_{n \hspace{0.05cm}\geq \hspace{0.05cm}0} A_{n}'(r_2) x^{n+r_2} + \sum_{n\hspace{0.05cm} \geq\hspace{0.05cm} 0} A_{n}(r_2) x^{n+r_2}\hspace{0.05cm} \log x$$
     \e{itemize}
     The larger root always yields a fractional power series solution. In the first case, the smaller root also yields a fractional power series solution. In the second and third cases, the second solution may involve a log term.
 \e{itemize}
@@ -512,7 +515,7 @@ right  = 3.00cm]{geometry}
     \i For all $p\geq1$, the {\color{b}Gamma function} is defined as:
     $$\Gamma(p) = \int_{0}^{\infty} t^{p-1}e^{-t} dt$$
     \i $$\Gamma(p+1)=p\Gamma(p)~ ~\Rightarrow~ ~\Gamma(p) = \frac{\Gamma(p+1)}{p}$$
-    $$\lim_{p~\rightarrow~0}\Gamma(p) = \lim_{p~\rightarrow~0} \frac{\Gamma(p+1)}{p} = \pm \infty$$
+    $$\lim_{p\hspace{0.05cm}\rightarrow\hspace{0.05cm}0}\Gamma(p) = \lim_{p\hspace{0.05cm}\rightarrow\hspace{0.05cm}0} \frac{\Gamma(p+1)}{p} = \pm \infty$$
     $$\Gamma(1/2) = \sqrt{\pi} \approx 1.772$$
 \e{itemize}
 
@@ -522,12 +525,12 @@ right  = 3.00cm]{geometry}
 
 \b{itemize}
     \i Bessel equation is the second-order linear ODE:
-    $$ x^2 y'' + x y' + (x^2-v^2) y = 0,~~~p~\geq~0~~~~\ldots1$$
+    $$ x^2 y'' + x y' + (x^2-v^2) y = 0,~~~p~\geq~0~~~~\ldots(1)$$
     its solutions are called {\color{b}Bessel functions.} Since $x = 0$ is a regular singular point of (1), we get a Frobenius solution, called {\color{b}Bessel function of first kind.} The second linearly independent solution of (1) is called {\color{b}Bessel function of second kind.}
     \i Bessel function of first kind of order $p$:
-    $$ J_p(x) = \sum_{n~\geq~0} \frac{(-1)^n}{n!\hspace{0.05cm}\Gamma(n+p+1)}\bigg(\frac{x}{2}\bigg)^{2n+p}, ~~~x~>~0$$
+    $$ J_p(x) = \sum_{n\hspace{0.05cm}\geq\hspace{0.05cm}0} \frac{(-1)^n}{n!\hspace{0.05cm}\Gamma(n+p+1)}\bigg(\frac{x}{2}\bigg)^{2n+p}, ~~~x~>~0$$
     \i Second solution of the Bessel equation linearly independent of $J_p(x)$:
-    $$ J_{-p}(x) = \bigg(\frac{x}{2}\bigg)^{-p} \sum_{n~\geq~0} \frac{(-1)^n}{n!\hspace{0.05cm}\Gamma(n-p+1)}\bigg(\frac{x}{2}\bigg)^{2n}, ~~~x~>~0$$
+    $$ J_{-p}(x) = \bigg(\frac{x}{2}\bigg)^{-p} \sum_{n\hspace{0.05cm}\geq\hspace{0.05cm}0} \frac{(-1)^n}{n!\hspace{0.05cm}\Gamma(n-p+1)}\bigg(\frac{x}{2}\bigg)^{2n}, ~~~x~>~0$$
     \i If $p\notin\{0,1,2,\ldots\}$, $J_p(x)$ and $J_{-p}(x)$ are the two independent solutions of the Bessel equation. If $p\in\{0,1,2,\ldots\}$, then $J_{-p}(x) = (-1)^pJ_p(x)$. Thus in this case the second solution is not $J_{-p}(x)$.
     \i \tb{Bessel's identities:}
     \b{itemize}
@@ -560,7 +563,7 @@ right  = 3.00cm]{geometry}
     and $z(x)$ be a non-trivial solutions of:
     $$z''+r(x)z=0$$
     where $q(x)>r(x)>0$ are continuous, then $y(x)$ vanishes at least once between any two consecutive zeroes of $z(x)$
-    \i \tb{Theorem:} Substituting $u(x) = \sqrt{x}y(x)$ in Bessel equation, we get Bessel equation in normal form $(p \geq 0)$:
+    \i \tb{Theorem:} Substituting $u(x) = \sqrt{x}\hspace{0.05cm}y(x)$ in Bessel equation, we get Bessel equation in normal form $(p \geq 0)$:
     $$u''+q(x)=0,~~~q(x)=1+\frac{1-4p^2}{4x^2}$$
     Now for different values of $p$:
     \b{itemize}
@@ -577,20 +580,20 @@ right  = 3.00cm]{geometry}
     This is similar to the previous inner product except that $f(x)g(x)$ is now multiplied by $x$ and the interval of integration is from 0 to 1. We call a function on $[0, 1]$ square integrable with respect to this inner product if:
     $$\int_{0}^{1} xf^2(x)dx<\infty$$
     The multiplying factor $x$ is called a {\color{b}weight function.}
-    \i \tb{Theorem:} fix $p\geq0$. Let $Z^{(p)}=\{\lambda_{p,1},\lambda_{p,2},\ldots\}$ denote the set of zeroes of $J_p(x)$ on $(0,\infty)$. Then the set of scaled Bessel functions:
+    \i \tb{Theorem:} fix $p\geq0$. Let $Z^{(p)}= \{ \lambda_{p,1},\lambda_{p,2},\ldots\}$ denote the set of zeroes of $J_p(x)$ on $(0,\infty)$. Then the set of scaled Bessel functions:
     $$\{J_p(\lambda_{p,1}),J_p(\lambda_{p,2}),\ldots\}$$
     form an orthogonal family with respect to the above inner product, i.e., $\langle J_p(\lambda_{p,k}x), J_p(\lambda_{p,l}x)\rangle=$
     $$\int_{0}^{1} x J_p(\lambda_{p,k}x) J_p(\lambda_{p,l}x)dx = \b{cases}
     \frac{1}{2}[J_{p+1}(\lambda_{p,k})]^2, ~~~if ~k~=~l\\
     0, ~~~~~~~\quad\quad~\quad\quad if~k~\neq~l
     \e{cases}$$
-    \i \tb{Theorem:} fix $p\geq 0$ and $Z_{(p)}=\lambda_{p,1},\lambda_{p,2},\ldots\}$ be zeroes of $J_p(x)$ on $(0,\infty)$. Any square-integrable function $f(x)$ on $[0,1]$ can be expanded in a series of scaled Bessel functions $J_p(\lambda_{p,n}x)$ as:
-    $$f(x)=\sum_{n~\geq~1} c_n J_p(\lambda_{p,n}x)$$
+    \i \tb{Theorem:} fix $p\geq 0$ and $Z^{(p)}= \{ \lambda_{p,1},\lambda_{p,2},\ldots\}$ be zeroes of $J_p(x)$ on $(0,\infty)$. Any square-integrable function $f(x)$ on $[0,1]$ can be expanded in a series of scaled Bessel functions $J_p(\lambda_{p,n}x)$ as:
+    $$f(x)=\sum_{n\hspace{0.05cm}\geq\hspace{0.05cm}1} c_n J_p(\lambda_{p,n}x)$$
     where
     $$c_n = \frac{2}{[J_{p+1}(\lambda_{p,n})]^2} \int_{0}^{1} xf(x)J_p(\lambda_{p,n}xdx$$
     This is {\color{b}Fourier-Bessel series} of $f(x)$ for parameter $p$.
     \i Fourier-Bessel series converges to $f(x)$ in norm, i.e.:
-    $$\bigg|\bigg|f(x)-\sum_{n~=~1}^{m} c_n J_p(\lambda_{p,n}x)\bigg|\bigg| \text{ converges to 0 as } m\rightarrow\infty$$
+    $$\bigg|\bigg|f(x)-\sum_{n\hspace{0.05cm}=\hspace{0.05cm}1}^{m} c_n J_p(\lambda_{p,n}x)\bigg|\bigg| \text{ converges to 0 as } m\rightarrow\infty$$
     \i \tb{Bessel expansion theorem:} assume $f$ and $f'$ have at most a finite number of jump discontinuities in $[0, 1]$, then the Bessel series converges for $0 < x < 1$ to:
     $$\frac{f(x_-)+f(x_+)}{2}$$
     At $x=1$, the series always converges to 0 for all $f$. At $x=0$, if $p=0$ then it converges to $f(0_+)$. At $x=0$, if $p>0$ then it converges to 0.
@@ -603,7 +606,7 @@ right  = 3.00cm]{geometry}
 \b{itemize}
     \i A {\color{b}Boundary value problem (BVP)} is a system of ordinary differential equations with solution and derivative values specified at more than one point
     \i An {\color{b}eigen value} is each of a set of values of a parameter for which a differential equation has a non-zero solution (an eigenfunction) under given conditions
-    \i Nonzero solutions for an eigenvalue $\lambda$ are called $\lambda$-eigenfunction, or eigenfunction associated with $\lambda$.
+    \i Nonzero solutions for an eigenvalue $\lambda$ are called $\lambda$-eigenfunction, or eigenfunction associated with $\lambda$
     \i Solving an eigenvalue problem means finding all its eigenvalues and associated eigenfunctions
     \i \tb{Theorem:} the eigenvalue problem:
     $$ y'' +\lambda y=0,~~~y(0)=0,~~y(L)=0$$
@@ -628,37 +631,37 @@ right  = 3.00cm]{geometry}
     there are no other eigenvalues
     \i \tb{Def:} we say two integrable unctions $f$ and $g$ are orthogonal on an interval $[a, b]$ if:
     $$\int_{a}^{b} f(x)g(x)dx=0$$
-    More generally, we say functions $\phi 1, \phi2, \ldots, \phi n,\ldots$ (finite or infinitely many) are orthogonal on $[a, b]$ if:
+    More generally, we say functions $\phi_1, \phi_2, \ldots, \phi_n,\ldots$ (finite or infinitely many) are orthogonal on $[a, b]$ if:
     $$ \int_{a}^{b} \phi_i(x)\phi_j(x)dx=0 ~~~\text{whenever} ~~~ i\neq j$$
     \i Considering the vector space of functions on $[a,b]$, the inner product on it is defined as:
     $$ \langle f, g \rangle = \int_{a}^{b} f(x)g(x)dx$$
     \i $L^2[a,b]$ is the subspace of those functions satisfying $\langle f, g \rangle < \infty$
     \i \tb{Theorem:} let $f\in L^2[-L,L]$. Consider the series:
-    $$F_f(x) = a_0 +\sum_{n~=~1}^{\infty} (a_n cos\frac{n\pi x}{L} +b_n sin \frac{n\pi x}{L}) $$
+    $$F_f(x) = a_0 +\sum_{n\hspace{0.05cm}=\hspace{0.05cm}1}^{\infty} (a_n cos\frac{n\pi x}{L} +b_n sin \frac{n\pi x}{L}) $$
     which is called the {\color{b}Fourier series of $f$ on $[-L,L]$}. Here:
     $$a_0 = \frac{1}{2L}\int_{-L}^{L} f(x)dx $$
     and for $n>0$:
     $$ a_n = \frac{1}{L}\int_{-L}^{L} f(x) dx cos\frac{n\pi x}{L} ~~~~~~~~ b_n = \frac{1}{L}\int_{-L}^{L} f(x) dx sin\frac{n\pi x}{L}$$
     The above series converges to $f$ in the $L^2$-norm, that is:
-    $$\lim_{N~\rightarrow~\infty} \bigg|\bigg| f-a_0-\sum_{n~=~1}^{N} \bigg(a_n cos\frac{n\pi x}{L} + b_n sin\frac{n\pi x}{L} \bigg)\bigg|\bigg|=0$$
+    $$\lim_{N\hspace{0.05cm}\rightarrow\hspace{0.05cm}\infty} \bigg|\bigg| f-a_0-\sum_{n\hspace{0.05cm}=\hspace{0.05cm}1}^{N} \bigg(a_n cos\frac{n\pi x}{L} + b_n sin\frac{n\pi x}{L} \bigg)\bigg|\bigg|=0$$
     \i \tb{Def:} a function $f$ on $[a, b]$ is said to be piecewise smooth if:
     \b{itemize}
         \item[$-$] $f$ has  atmost finitely many points of discontinuity
         \item[$-$] $f'(0)$ exists and has atmost finitely many points of discontinuity
-        \item[$-$] $f(x_0^+)=\lim_{x\rightarrow x_0^+} f(x)$ and $f'(x_0^+)=\lim_{x\rightarrow x_0^+} f'(x)$ exists if $a\geq x_0 < b$
-        \item[$-$] $f(x_0^-)=\lim_{x\rightarrow x_0^-} f(x)$ and $f'(x_0^-)=\lim_{x\rightarrow x_0^-} f'(x)$ exists if $a <x_0 \geq b$
+        \item[$-$] $f(x_0^+)=\lim_{x\hspace{0.05cm}\rightarrow \hspace{0.05cm}x_0^+} f(x)$ and $f'(x_0^+)=\lim_{x\hspace{0.05cm}\rightarrow\hspace{0.05cm} x_0^+} f'(x)$ exists if $a\geq x_0 < b$
+        \item[$-$] $f(x_0^-)=\lim_{x\hspace{0.05cm}\rightarrow \hspace{0.05cm}x_0^-} f(x)$ and $f'(x_0^-)=\lim_{x\hspace{0.05cm}\rightarrow\hspace{0.05cm} x_0^-} f'(x)$ exists if $a <x_0 \geq b$
     \e{itemize}
     \i \tb{Theorem:} let $f(x$) be a piecewise smooth function on $[-L, L]$. Then the Fourier series:
-    $$F_f(x) = a_0 +\sum_{n~=~1}^{\infty} (a_n cos\frac{n\pi x}{L} +b_n sin \frac{n\pi x}{L}) $$
+    $$F_f(x) = a_0 +\sum_{n\hspace{0.05cm}=\hspace{0.05cm}1}^{\infty} (a_n cos\frac{n\pi x}{L} +b_n sin \frac{n\pi x}{L}) $$
     of $f$ converges to:
     $$F_f(x) = \begin{cases}
     \frac{1}{2}[f((-L)^+)+f(L^-)],~~~x=-L,L\\
     \frac{1}{2}[f(x^+)+f(x^-)],~~~x\in (-L,L)
     \end{cases}$$
     Therefore, at every point $x$ of continuity of $f$, the Fourier series converges to $f(x)$. If we re-define $f(x)$ at every point of discontinuity $x$ as $\frac{1}{2}[f(x^+)+f(x^-)]$ then the Fourier series represents the function everywhere. Thus two functions can have same Fourier series.
-    \i Suppose we have an orthogonal set $\{\phi1, \phi2,\ldots\}$ which has the following property. For every function $f$ we have a series $\sum_{i\geq1} a_i \phi_i$ which converges to $f$, that is:
-    $$\lim_{n~\rightarrow~\infty} ||f-\sum_{i~=~1}^n a_i \phi_i || = 0 $$
-    then we say that the set $\{\phi1, \phi2,\ldots\}$ is a {\color{b}normed basis} for $V$. Note that this is different from the notion of basis, where we need that every vector should be written as a finite linear combination of the basis vectors. The the coefficient of $\phi_n$ in the expansion of $f$ is given by:
+    \i Suppose we have an orthogonal set $\{\phi_1, \phi_2,\ldots\}$ which has the following property. For every function $f$ we have a series $\sum_{i\hspace{0.05cm}\geq\hspace{0.05cm}1} a_i \phi_i$ which converges to $f$, that is:
+    $$\lim_{n\hspace{0.05cm}\rightarrow\hspace{0.05cm}\infty} ||f-\sum_{i\hspace{0.05cm}=\hspace{0.05cm}1}^n a_i \phi_i || = 0 $$
+    then we say that the set $\{\phi_1, \phi_2,\ldots\}$ is a {\color{b}normed basis} for $V$. Note that this is different from the notion of basis, where we need that every vector should be written as a finite linear combination of the basis vectors. The the coefficient of $\phi_n$ in the expansion of $f$ is given by:
     $$a_n = \frac{\langle f,\phi_n\rangle}{\langle \phi_n,\phi_n\rangle}$$
 \e{itemize}
 
@@ -670,10 +673,10 @@ right  = 3.00cm]{geometry}
     \i A {\color{b}partial differential equation (PDE)} is an equation involving $u$ and the partial derivatives of $u$. The {\color{b}order} of the PDE is the order of the highest partial derivative of $u$ in the equation.
     \i Examples of some famous PDEs:
     \b{itemize}
-        \item[$-$] $u_t-k^2(u_{xx} +u_{yy})=0$: two dimensional heat equation, order 2. Here $u$ is a function of three variables
-        \item[$-$] $u_{tt}-c^2(u_{xx} +u_{yy})=0$: two dimensional wave equation, order 2. Here $u$ is a function of three variables
-        \item[$-$] $u_{xx} +u_{yy}=0$: two dimensional Lapalace equation, order 2. Here $u$ is a function of two variables
-        \item[$-$] $u_{tt} +u_{xxxx}=0$: Beam equation, order 4. Here $u$ is a function of two variables
+        \item[$-$] $u_t-k^2(u_{xx} +u_{yy})=0$: two dimensional heat equation, order 2. Here $u$ is a function of three variables.
+        \item[$-$] $u_{tt}-c^2(u_{xx} +u_{yy})=0$: two dimensional wave equation, order 2. Here $u$ is a function of three variables.
+        \item[$-$] $u_{xx} +u_{yy}=0$: two dimensional Lapalace equation, order 2. Here $u$ is a function of two variables.
+        \item[$-$] $u_{tt} +u_{xxxx}=0$: Beam equation, order 4. Here $u$ is a function of two variables.
     \e{itemize}
     \i Let $\mathrsfs{S}$ denote a space of functions. A differential operator is a map $D:\mathrsfs{S}\rightarrow\mathrsfs{S}$
     \i A  differential operator is said to be linear if it satisfies the condition:
@@ -698,38 +701,38 @@ right  = 3.00cm]{geometry}
     \e{itemize}
     \i Two dimensional Laplace operator, $\delta = \frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}$ is elliptic in $\mathbb{R}^2$, since $\mathbb{D}=1$
     \i One dimensional heat operator (there are two variables, $t$ and $x$), $H=\frac{\partial}{\partial t}-\frac{\partial^2}{\partial x^2}$ is parabolic in $\mathbb{R}^2$, since $\mathbb{D}=0$
-    \i One dimensional wave operator (there are two variables, $t$ and $x$), $\Box = \frac{\partial^2}{\partial t^2}-\frac{\partial^2}{\partial x^2}$ is hyperbolic in $\mathbb{R}^2$,since $\mathbb{D}=-1$
+    \i One dimensional wave operator (there are two variables, $t$ and $x$), $\Box = \frac{\partial^2}{\partial t^2}-\frac{\partial^2}{\partial x^2}$ is hyperbolic in $\mathbb{R}^2$, since $\mathbb{D}=-1$
     \i For the Tricomi operator, $T=\frac{\partial^2}{\partial x^2}+x\frac{\partial^2}{\partial y^2}$, the discriminant $\mathbb{D}=x$. Hence $T$ is elliptic in the half-plane $x>0$, parabolic on the $y$-axis and hyperbolic in the half-plane $x<0$
     \i \tb{Def:} let $L$ be a linear differential operator. The PDE $Lu = 0$ is called {\color{b}homogeneous} and the PDE $Lu = f$, $(f \neq 0)$ is {\color{b}non-homogeneous.}
-    \i \tb{Principle 1:} if $u_1, \ldots , u_N$ are solutions of $Lu = 0$ and $c_1,\ldots, c_N$ are constants, then $\sum_{i~=~1}^{N}c_i u_i$ is also a solution of $Lu = 0$. In general, space of solutions of $Lu = 0$ contains infinitely many independent solutions and we may need to use infinite linear combinations of them.
+    \i \tb{Principle 1:} if $u_1, \ldots , u_N$ are solutions of $Lu = 0$ and $c_1,\ldots, c_N$ are constants, then $\sum_{i\hspace{0.05cm}=\hspace{0.05cm}1}^{N}c_i u_i$ is also a solution of $Lu = 0$. In general, space of solutions of $Lu = 0$ contains infinitely many independent solutions and we may need to use infinite linear combinations of them.
     \i \tb{Principle 2:} Let $L$ be a differentiable operator of order $n$. Assume:
     \b{itemize}
         \item[$-$] $u_1, u_2,\ldots$ are infinitely many solutions of $Lu = 0$
-        \item[$-$] the series $w=\sum_{i~\geq~1}^{}c_i u_i$ with $c_1, c_2, \ldots$ constants, converges to a function, which is differentiable $n$ times
-        \item[$-$] term by term partial differentiation is valid for the series, that is, $Dw =\sum_{i~\geq~1}^{}c_i Du_i$, D is any partial differentiation of order $\geq$ order of $L$
+        \item[$-$] the series $w=\sum_{i\hspace{0.05cm}\geq\hspace{0.05cm}1}^{}c_i u_i$ with $c_1, c_2, \ldots$ constants, converges to a function, which is differentiable $n$ times
+        \item[$-$] term by term partial differentiation is valid for the series, that is, $Dw =\sum_{i\hspace{0.05cm}\geq\hspace{0.05cm}1}^{}c_i Du_i$, where D is any partial differentiation of order $\geq$ order of $L$
     \e{itemize}
     Then $w$ is again a solution of $Lu = 0$.
     \i \tb{Principle 3 (for non-homogenous PDE):} if $u_i$ is a solution of $Lu=f_i$, then:
-    $$w=\sum_{i~=~1}^{N}c_i u_i$$
-    with constants $c_1$, is a solution of $Lu=\sum_{i~=~1}^{N}c_i f_i$
+    $$w=\sum_{i\hspace{0.05cm}=\hspace{0.05cm}1}^{N}c_i u_i$$
+    with constants $c_1$, is a solution of $Lu=\sum_{i\hspace{0.05cm}=\hspace{0.05cm}1}^{N}c_i f_i$
     \i The formal solution of IBVP:
     $$u_t=k^2 u_{xx},~~~0<x<L,~t>0$$
     $$u(0,t)=0,~~~t\geq0$$
     $$u(L,t)=0,~~~t\geq0$$
     $$u(x,0)=f(x),~~~0\leq x \leq L$$
     is:
-    $$u(x,t)=\sum_{n~=~1}^{\infty} \alpha_n e^{(\frac{-n^2\pi^2 k^2}{L^2}t)}sin \frac{n\pi x}{L}$$
+    $$u(x,t)=\sum_{n\hspace{0.05cm}=\hspace{0.05cm}1}^{\infty} \alpha_n e^{(\frac{-n^2\pi^2 k^2}{L^2}t)}sin \frac{n\pi x}{L}$$
     where:
-    $$f(x)=\sum_{n~=~1}^{\infty} \alpha_n sin \frac{n\pi x}{L} \text{ is the Fourier series of } f \text{ on } [0,L]$$
+    $$f(x)=\sum_{n\hspace{0.05cm}=\hspace{0.05cm}1}^{\infty} \alpha_n sin \frac{n\pi x}{L} \text{ is the Fourier series of } f \text{ on } [0,L]$$
     that is:
     $$\alpha_n = \frac{2}{L}\int_{0}^{L} f(x) sin \frac{n\pi x}{L} dx$$
-    \i \tb{Theorem:} let $f(x)$ be continuous and piecewise smooth on $[0,L]$. Let $f(x)=\sum_{n~=~1}^{\infty}\alpha_n sin \frac{n\pi x}{L}$ with $\alpha_n=\frac{2}{L}\int_{0}^{L} f(x) sin \frac{n\pi x}{L} dx$ be the Fourier series of $f$ on $[0,L]$. Then the IBVP:
+    \i \tb{Theorem:} let $f(x)$ be continuous and piecewise smooth on $[0,L]$. Let $f(x)=\sum_{n\hspace{0.05cm}=\hspace{0.05cm}1}^{\infty}\alpha_n sin \frac{n\pi x}{L}$ with $\alpha_n=\frac{2}{L}\int_{0}^{L} f(x) sin \frac{n\pi x}{L} dx$ be the Fourier series of $f$ on $[0,L]$. Then the IBVP:
     $$u_t=k^2 u_{xx},~~~0<x<L,~t>0$$
     $$u(0,t)=0,~~~t\geq0$$
     $$u(L,t)=0,~~~t\geq0$$
     $$u(x,0)=f(x),~~~0\leq x \leq L$$
     has a solution:
-    $$u(x,t)=\sum_{n~=~1}^{\infty} \alpha_n e^{(\frac{-n^2\pi^2 k^2}{L^2}t)}sin \frac{n\pi x}{L}$$
+    $$u(x,t)=\sum_{n\hspace{0.05cm}=\hspace{0.05cm}1}^{\infty} \alpha_n e^{(\frac{-n^2\pi^2 k^2}{L^2}t)}sin \frac{n\pi x}{L}$$
     Here $u_t$ and $u_{xx}$ can be obtained by term-wise differentiation for $t>0$
     \i The formal solution of IBVP:
     $$u_t=k^2 u_{xx},~~~0<x<L,~t>0$$
@@ -737,19 +740,19 @@ right  = 3.00cm]{geometry}
     $$u_x(L,t)=0,~~~t>0$$
     $$u(x,0)=f(x),~~~0\leq x \leq L$$
     is:
-    $$u(x,t)=\sum_{n~=~0}^{\infty} \alpha_n e^{(\frac{-n^2\pi^2 k^2}{L^2}t)}cos \frac{n\pi x}{L}$$
+    $$u(x,t)=\sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty} \alpha_n e^{(\frac{-n^2\pi^2 k^2}{L^2}t)}cos \frac{n\pi x}{L}$$
     where:
-    $$S(x)=\sum_{n~=~0}^{\infty} \alpha_n sin \frac{n\pi x}{L} \text{ is the Fourier series of } f \text{ on } [0,L]$$
+    $$S(x)=\sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty} \alpha_n sin \frac{n\pi x}{L} \text{ is the Fourier series of } f \text{ on } [0,L]$$
     that is:
     $$\alpha_0=\frac{1}{L} \int_{0}^{L}f(x)dx$$
     $$\alpha_n = \frac{2}{L}\int_{0}^{L} f(x) cos \frac{n\pi x}{L} dx$$
-    \i \tb{Theorem:} let $f(x)$ be continuous and piecewise smooth on $[0,L]$; $f'(0)=f'(L)=0$. Let $S(x)=\sum_{n~=~0}^{\infty}\alpha_n cos \frac{n\pi x}{L}$ be the Fourier series of $f$ on $[0,L]$. Then the IBVP:
+    \i \tb{Theorem:} let $f(x)$ be continuous and piecewise smooth on $[0,L]$; $f'(0)=f'(L)=0$. Let $S(x)=\sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty}\alpha_n cos \frac{n\pi x}{L}$ be the Fourier series of $f$ on $[0,L]$. Then the IBVP:
     $$u_t=k^2 u_{xx},~~~0<x<L,~t>0$$
     $$u_x(0,t)=0,~~~t>0$$
     $$u_x(L,t)=0,~~~t>0$$
     $$u(x,0)=f(x),~~~0\leq x \leq L$$
     has a solution:
-    $$u(x,t)=\sum_{n~=~0}^{\infty} \alpha_n e^{(\frac{-n^2\pi^2 k^2}{L^2}t)}cos \frac{n\pi x}{L}$$
+    $$u(x,t)=\sum_{n\hspace{0.05cm}=\hspace{0.05cm}0}^{\infty} \alpha_n e^{(\frac{-n^2\pi^2 k^2}{L^2}t)}cos \frac{n\pi x}{L}$$
     Here $u_t$ and $u_{xx}$ can be obtained by term-wise differentiation for $t>0$
 \e{itemize}
 
@@ -764,7 +767,7 @@ right  = 3.00cm]{geometry}
     $$u(x,0)=f(x),~~~0\leq x\leq L$$
     $$u_t(x,0)=g(x),~~~0\leq x \leq L$$
     The formal solution of the above problem is:
-    $$u(x,t)=\sum_{n~\geq~1}^{} \bigg(\alpha_n cos\bigg(\frac{kn\pi}{L}t\bigg)+\frac{\beta_n L}{kn\pi} sin\bigg(\frac{kn\pi}{L}t\bigg)\bigg) sin \frac{n\pi x}{L}$$
+    $$u(x,t)=\sum_{n\hspace{0.05cm}\geq\hspace{0.05cm}1}^{} \bigg(\alpha_n cos\bigg(\frac{kn\pi}{L}t\bigg)+\frac{\beta_n L}{kn\pi} sin\bigg(\frac{kn\pi}{L}t\bigg)\bigg) sin \frac{n\pi x}{L}$$
     where:
     $$\alpha_n = \frac{2}{L}\int_{0}^{L} f(x) sin \frac{n\pi x}{L}dx ~~ \text{and} $$
     $$\beta_n = \frac{2}{L}\int_{0}^{L} g(x) sin \frac{n\pi x}{L}dx$$
@@ -774,7 +777,7 @@ right  = 3.00cm]{geometry}
     $$u(x,0)=f(x),~~~0\leq x\leq L$$
     $$u_t(x,0)=g(x),~~~0\leq x \leq L$$
     has an actual solution, which is given by:
-    $$u(x,t)=\sum_{n~\geq~1}^{} \bigg(\alpha_n cos\bigg(\frac{kn\pi}{L}t\bigg)+\frac{\beta_n L}{kn\pi} sin\bigg(\frac{kn\pi}{L}t\bigg)\bigg) sin \frac{n\pi x}{L}$$
+    $$u(x,t)=\sum_{n\hspace{0.05cm}\geq\hspace{0.05cm}1}^{} \bigg(\alpha_n cos\bigg(\frac{kn\pi}{L}t\bigg)+\frac{\beta_n L}{kn\pi} sin\bigg(\frac{kn\pi}{L}t\bigg)\bigg) sin \frac{n\pi x}{L}$$
     where:
     $$\alpha_n = \frac{2}{L}\int_{0}^{L} f(x) sin \frac{n\pi x}{L}dx ~~ \text{and} $$
     $$\beta_n = \frac{2}{L}\int_{0}^{L} g(x) sin \frac{n\pi x}{L}dx$$
@@ -784,7 +787,7 @@ right  = 3.00cm]{geometry}
     $$u(x,0)=f(x),~~~0\leq x\leq L$$
     $$u_t(x,0)=g(x),~~~0\leq x \leq L$$
     The formal solution of the above problem is:
-    $$u(x,t)=\beta_0 t+\alpha_0+\sum_{n~\geq~1}^{} \bigg(\alpha_n cos\bigg(\frac{kn\pi}{L}t\bigg)+\frac{\beta_n L}{kn\pi} sin\bigg(\frac{kn\pi}{L}t\bigg)\bigg) sin \frac{n\pi x}{L}$$
+    $$u(x,t)=\beta_0 t+\alpha_0+\sum_{n\hspace{0.05cm}\geq\hspace{0.05cm}1}^{} \bigg(\alpha_n cos\bigg(\frac{kn\pi}{L}t\bigg)+\frac{\beta_n L}{kn\pi} sin\bigg(\frac{kn\pi}{L}t\bigg)\bigg) sin \frac{n\pi x}{L}$$
     where:
     $$\alpha_0 = \frac{1}{L}\int_{0}^{L}f(x)dx \quad\quad\quad\quad \alpha_n = \frac{2}{L}\int_{0}^{L} f(x) sin \frac{n\pi x}{L}dx ~~ \text{and} $$
     $$\beta_0 = \frac{1}{L}\int_{0}^{L}g(x)dx \quad\quad\quad\quad \beta_n = \frac{2}{L}\int_{0}^{L} g(x) sin \frac{n\pi x}{L}dx$$
@@ -794,7 +797,7 @@ right  = 3.00cm]{geometry}
     $$u(x,0)=f(x),~~~0\leq x\leq L$$
     $$u_t(x,0)=g(x),~~~0\leq x \leq L$$
     has an actual solution, which is given by:
-    $$u(x,t)=\beta_0 t+\alpha_0+\sum_{n~\geq~1}^{} \bigg(\alpha_n cos\bigg(\frac{kn\pi}{L}t\bigg)+\frac{\beta_n L}{kn\pi} sin\bigg(\frac{kn\pi}{L}t\bigg)\bigg) sin \frac{n\pi x}{L}$$
+    $$u(x,t)=\beta_0 t+\alpha_0+\sum_{n\hspace{0.05cm}\geq\hspace{0.05cm}1}^{} \bigg(\alpha_n cos\bigg(\frac{kn\pi}{L}t\bigg)+\frac{\beta_n L}{kn\pi} sin\bigg(\frac{kn\pi}{L}t\bigg)\bigg) sin \frac{n\pi x}{L}$$
     where:
     $$\alpha_0 = \frac{1}{L}\int_{0}^{L}f(x)dx \quad\quad\quad\quad \alpha_n = \frac{2}{L}\int_{0}^{L} f(x) sin \frac{n\pi x}{L}dx ~~ \text{and} $$
     $$\beta_0 = \frac{1}{L}\int_{0}^{L}g(x)dx \quad\quad\quad\quad \beta_n = \frac{2}{L}\int_{0}^{L} g(x) sin \frac{n\pi x}{L}dx$$
@@ -811,7 +814,7 @@ right  = 3.00cm]{geometry}
     $$u(x,0)=f(x),~~~0\leq x\leq a$$
     $$u(x,b)=0$$
     The formal solution of the above problem is:
-    $$u(x,y)=\sum_{n~\geq~1}^{} \bigg(\alpha_n sin\bigg(\frac{n\pi x}{a}\bigg)+\sinh \bigg(\frac{n\pi (b-y)}{a}\bigg)/ \sinh\bigg(\frac{n\pi b}{a}\bigg)\bigg)$$
+    $$u(x,y)=\sum_{n\hspace{0.05cm}\geq\hspace{0.05cm}1}^{} \bigg(\alpha_n sin\bigg(\frac{n\pi x}{a}\bigg)+\sinh \bigg(\frac{n\pi (b-y)}{a}\bigg)/ \sinh\bigg(\frac{n\pi b}{a}\bigg)\bigg)$$
     where:
     $$\alpha_n = \frac{2}{L}\int_{0}^{L} f(x) sin \frac{n\pi x}{L}dx$$
     \i \tb{Theorem:} let $f$ be continuous and piecewise smooth function on $[0,a]$ such that $f(0)=f(a)=0$. Consider the Laplace equation with the boundary values (Dirichlet conditions):
@@ -820,7 +823,7 @@ right  = 3.00cm]{geometry}
     $$u(x,0)=f(x),~~~0\leq x\leq a$$
     $$u(x,b)=0$$
     The solution to the above problem is given by:
-    $$u(x,y)=\sum_{n~\geq~1}^{} \bigg(\alpha_n sin\bigg(\frac{n\pi x}{a}\bigg)+\sinh \bigg(\frac{n\pi (b-y)}{a}\bigg)/ \sinh\bigg(\frac{n\pi b}{a}\bigg)\bigg)$$
+    $$u(x,y)=\sum_{n\hspace{0.05cm}\geq\hspace{0.05cm}1}^{} \bigg(\alpha_n sin\bigg(\frac{n\pi x}{a}\bigg)+\sinh \bigg(\frac{n\pi (b-y)}{a}\bigg)/ \sinh\bigg(\frac{n\pi b}{a}\bigg)\bigg)$$
     where:
     $$\alpha_n = \frac{2}{L}\int_{0}^{L} f(x) sin \frac{n\pi x}{L}dx$$
     \i \tb{Theorem:} consider the Laplace equation with boundary values (Neumann conditions) given by:
@@ -829,7 +832,7 @@ right  = 3.00cm]{geometry}
     $$u(x,0)=f(x),~~~0\leq x\leq a$$
     $$u(x,b)=0,~~~0\leq x\leq a$$
     The formal solution of the above problem is:
-    $$u(x,y)=\alpha_0 \bigg( \frac{-1}{b}y +1 \bigg) +\sum_{n~\geq~1}^{} \bigg(\alpha_n cos\bigg(\frac{n\pi x}{a}\bigg)+\sinh \bigg(\frac{n\pi (b-y)}{a}\bigg)/ \sinh\bigg(\frac{n\pi b}{a}\bigg)\bigg)$$
+    $$u(x,y)=\alpha_0 \bigg( \frac{-1}{b}y +1 \bigg) +\sum_{n\hspace{0.05cm}\geq\hspace{0.05cm}1}^{} \bigg(\alpha_n cos\bigg(\frac{n\pi x}{a}\bigg)+\sinh \bigg(\frac{n\pi (b-y)}{a}\bigg)/ \sinh\bigg(\frac{n\pi b}{a}\bigg)\bigg)$$
     where:
     $$\alpha_0=\frac{1}{L}\int_{0}^{L} f(x) dx \quad\quad\quad\quad\alpha_n = \frac{2}{L}\int_{0}^{L} f(x) sin \frac{n\pi x}{L}dx$$
     \i \tb{Theorem:} let $f$ be continuous and piecewise smooth function on $[0,a]$. Consider the Laplace equation with the boundary values (Neumann conditions):
@@ -838,7 +841,7 @@ right  = 3.00cm]{geometry}
     $$u(x,0)=f(x),~~~0\leq x\leq a$$
     $$u(x,b)=0,~~~0\leq x\leq a$$
     The solution to the above problem is given by:
-    $$u(x,y)=\alpha_0 \bigg( \frac{-1}{b}y +1 \bigg) +\sum_{n~\geq~1}^{} \bigg(\alpha_n cos\bigg(\frac{n\pi x}{a}\bigg)+\sinh \bigg(\frac{n\pi (b-y)}{a}\bigg)/ \sinh\bigg(\frac{n\pi b}{a}\bigg)\bigg)$$
+    $$u(x,y)=\alpha_0 \bigg( \frac{-1}{b}y +1 \bigg) +\sum_{n\hspace{0.05cm}\geq\hspace{0.05cm}1}^{} \bigg(\alpha_n cos\bigg(\frac{n\pi x}{a}\bigg)+\sinh \bigg(\frac{n\pi (b-y)}{a}\bigg)/ \sinh\bigg(\frac{n\pi b}{a}\bigg)\bigg)$$
     where:
     $$\alpha_0=\frac{1}{L}\int_{0}^{L} f(x) dx \quad\quad\quad\quad\alpha_n = \frac{2}{L}\int_{0}^{L} f(x) sin \frac{n\pi x}{L}dx$$
     \i \tb{Laplace operator in polar coordinates:}
@@ -846,9 +849,9 @@ right  = 3.00cm]{geometry}
     \i \tb{Theorem:} consider the differential equation:
     $$u_{tt}=k^2(u_{rr}+r^{-1} u_r +r^{-2}u_{\theta\theta}),~~~k>0$$
     in the disc $\{(x,y)\in\mathbb{R}^2~|~x^2+y^2<R^2\}$, with initial conditions:
-    $$u(r,\theta,0)=f(r,\theta) \quad \quad u_t(r,\theta,0)=g(r,\theta)$$
+    $$u(r,\theta,0)=f(r,\theta) \quad\text{and} \quad u_t(r,\theta,0)=g(r,\theta)$$
     where $f$ and $g$ are smooth functions in the disc, and boundary condition $u(R,\theta,t)=0$. This differential equation with the given initial and boundary conditions has a solution given by:
-    $$u(r,\theta,\hspace{0.05cm}t)=\sum_{n\geq 0, i\geq 1} \bigg( A_{n,i} \hspace{0.1cm}cos (n\hspace{0.05cm}\theta)\hspace{0.1cm} cos(\mu_{n,i}\hspace{0.05cm}t) + B_{n,i}\hspace{0.1cm} sin (n\hspace{0.05cm}\theta) \hspace{0.1cm}cos(\mu_{n,i}\hspace{0.05cm} t)+$$
+    $$u(r,\theta,\hspace{0.05cm}t)=\sum_{n\hspace{0.05cm}\geq\hspace{0.05cm} 0,\hspace{0.05cm} i\hspace{0.05cm}\geq\hspace{0.05cm} 1} \bigg( A_{n,i} \hspace{0.1cm}cos (n\hspace{0.05cm}\theta)\hspace{0.1cm} cos(\mu_{n,i}\hspace{0.05cm}t) + B_{n,i}\hspace{0.1cm} sin (n\hspace{0.05cm}\theta) \hspace{0.1cm}cos(\mu_{n,i}\hspace{0.05cm} t)+$$
     $$\quad\quad\quad\quad\quad~~~ C_{n,i}\hspace{0.1cm} cos (n\hspace{0.05cm}\theta)\hspace{0.1cm} sin(\mu_{n,i}\hspace{0.05cm} t)+D_{n,i}\hspace{0.1cm} sin (n\hspace{0.05cm}\theta)\hspace{0.1cm} sin(\mu_{n,i}\hspace{0.05cm} t)\bigg) J_n(\mu_{n,i}\hspace{0.05cm}r)$$
     where:
     $$A_{n,i} = \frac{\langle f, \hspace{0.1cm}J_n(\mu_{n,i}\hspace{0.05cm} r) \hspace{0.1cm}cos(n\hspace{0.05cm}\theta)\rangle}{\langle J_n(\mu_{n,i}\hspace{0.05cm} r) \hspace{0.1cm}cos(n\hspace{0.05cm}\theta), J_n(\mu_{n,i} \hspace{0.05cm}r)\hspace{0.1cm} cos(n\hspace{0.05cm}\theta)\rangle}$$
@@ -858,8 +861,6 @@ right  = 3.00cm]{geometry}
     $$C_{n,i} =\frac{1}{\mu_{n,i}} \frac{\langle g, \hspace{0.1cm}J_n(\mu_{n,i}\hspace{0.05cm} r) \hspace{0.1cm}cos(n\hspace{0.05cm}\theta)\rangle}{\langle J_n(\mu_{n,i}\hspace{0.05cm} r) \hspace{0.1cm}cos(n\hspace{0.05cm}\theta), J_n(\mu_{n,i} \hspace{0.05cm}r)\hspace{0.1cm} cos(n\hspace{0.05cm}\theta)\rangle}$$
     \vspace*{0.25cm}
     $$D_{n,i} =\frac{1}{\mu_{n,i}} \frac{\langle g, \hspace{0.1cm}J_n(\mu_{n,i}\hspace{0.05cm} r) \hspace{0.1cm}sin(n\hspace{0.05cm}\theta)\rangle}{\langle J_n(\mu_{n,i}\hspace{0.05cm} r) \hspace{0.1cm}sin(n\hspace{0.05cm}\theta), J_n(\mu_{n,i} \hspace{0.05cm}r)\hspace{0.1cm} sin(n\hspace{0.05cm}\theta)\rangle}$$
-
-
+    \i For non-homogenous equations, first make a substitution for $u$ and then try to find suitable solutions
 \e{itemize}
-
 \e{document}
