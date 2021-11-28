@@ -9,8 +9,8 @@ right  = 3.00cm]{geometry}
 \usepackage{graphicx}
 \usepackage{xcolor}
 
-\pagecolor[RGB]{18,18,18} %blackish
-\color[rgb]{0.9, 0.9, 0.9} %greyish
+% \pagecolor[RGB]{18,18,18} %blackish
+% \color[rgb]{0.9, 0.9, 0.9} %greyish
 
 \usepackage{hyperref}
 \usepackage{titlesec}
@@ -83,7 +83,7 @@ right  = 3.00cm]{geometry}
     \end{figure}
     \i Single-turn and multi-turn potentiometers are variable resistances, also multi-turn potentiometers provide finer tuning of resistances
     \i \tb{hardware description language (HDL)} - is a specialized computer language used to describe the structure and behaviour of electronic circuits, and most commonly, digital logic circuits
-    \i Very High Speed Integrated Circuit HDL (VHDL) - is a hardware description language which uses the syntax of ADA
+    \i \tb{very high speed integrated circuit HDL (VHDL)} - is a hardware description language which uses the syntax of ADA
     \i Uses of HDL:
     \b{itemize}
         \item[$-$] For describing hardware  
@@ -113,7 +113,7 @@ right  = 3.00cm]{geometry}
     \end{figure}
     \i The architecture inherits the port signals from its entity. Concurrent statements constituting the architecture can be placed in any order.
     \i Signals are carried by wires, variables are used for array indices, loop counters, etc.
-    \i When you assign a value to a variable the assignment becomes effective immediately, however when you assign a value to a signal there is an associated delay for this assignment aas it is there in a real circuit
+    \i When you assign a value to a variable the assignment becomes effective immediately, however when you assign a value to a signal there is an associated delay for this assignment as it is there in a real circuit
     \i \tb{component} - an {\color{green}entity $\leftrightarrow$ architecture} pair 
     \begin{figure}[H]
     \centering
@@ -125,10 +125,10 @@ right  = 3.00cm]{geometry}
     \i Objects in a package can be referred to by a {\color{green}packagename.objectname} syntax 
     \i A description can include a {\color{green}use} clause to incorporate the package in the design. Objects in the package then becomes visible to the description without having to use the dot reference as above.
     \i Many design elements such as packages, definitions and entire entity $\leftrightarrow$ architecture pairs can be placed in a {\color{green}library}
-    \i Any description invokes a library by first declaring it (For e.g. Library IEEE; )
-    \i Objects in the library can then be incorporated in the design by a {\color{green}use} clause (For e.g. Use IEEE.std\_logic\_1164.all; )
-    \i Various types of objects in VHDL are {\color{green}constants, variables, signals} and {\color{green}files.}
-    \i Declaration of objects include their object type as well as the data type of values that they can acquire (For e.g. signal Enable: BIT; )
+    \i Any description invokes a library by first declaring it (For e.g. Library IEEE;\hspace{0.05cm})
+    \i Objects in the library can then be incorporated in the design by a {\color{green}use} clause (For e.g. Use IEEE.std\_logic\_1164.all;\hspace{0.05cm})
+    \i Various types of objects in VHDL are {\color{green}constants, variables, signals} and {\color{green}files}
+    \i Declaration of objects include their object type as well as the data type of values that they can acquire (For e.g. signal Enable: BIT;\hspace{0.05cm})
     \begin{figure}[H]
     \centering
     \includegraphics[width=11cm]{EE214 images/VHDL data types.png}
@@ -147,7 +147,7 @@ right  = 3.00cm]{geometry}
     \e{itemize}
     \i \tb{std\_logic} - is a signal  which can take 1 of 9 possible values. It is defined by:\\
     \hspace*{90pt}\tb{type} std\_logic \tb{is} (`U', `X', `0', `1', `Z', `W', `L', `H', `-');
-    \i Object which  are declared to be of {\color{green}Physical type,} carry a value as well as a unit. These are used to represent physical quantities such as time, resistance and capacitance. Time is the only physical type, which is pre-defined in the language. We can define other physical types when required.
+    \i Objects which  are declared to be of {\color{green}Physical type,} carry a value as well as a unit. These are used to represent physical quantities such as time, resistance and capacitance. Time is the only physical type, which is pre-defined in the language. We can define other physical types when required.
     \i {\color{green}Composite data types} are collections of scalar types. VHDL recognizes records and arrays as composite data types. Records are like structures in C. Arrays are indexed collections of scalar types. 
     \i Arrays can be constrained or unconstrained:
     \b{itemize}
@@ -171,11 +171,11 @@ right  = 3.00cm]{geometry}
     \i {\color{green}Structural style} describes a design in terms of components and their interconnections. Each component declares its ports and the type and direction of signals that it expects through them. 
     \i A purely structural architecture for an entity will consist of:
     \b{itemize}
-        \item[$-$] {\tb{Component declarations:}} to associate component types with their port lists.
-        \item[$-$] {\tb{Signal declarations:}} to declare the signals used.
+        \item[$-$] {\tb{Component declarations:}} to associate component types with their port lists
+        \item[$-$] {\tb{Signal declarations:}} to declare the signals used
         \item[$-$] {\tb{Component instantiations:}} to place component instances and to portmap their ports to signals. Signals can be internal or port signals declared by the entity.
-        \item[$-$] {\tb{Configurations:}} to bind component types to entity $\leftrightarrow$ architecture pairs.
-        \item[$-$] {\tb{Repetition grammar:}} for describing multiple instances of the same component type – for example, memory cells or bus buffers.
+        \item[$-$] {\tb{Configurations:}} to bind component types to entity $\leftrightarrow$ architecture pairs
+        \item[$-$] {\tb{Repetition grammar:}} for describing multiple instances of the same component type – for example, memory cells or bus buffers
     \e{itemize}
     \i When we associate a component type with a previously defined entity $\leftrightarrow$ architecture pair, the chosen architecture could itself contain other components - and these components in turn would be associated with other entity $\leftrightarrow$ architecture pairs. This hierarchical association can be described by a standalone design unit called a {\color{green}configuration.}
     \begin{figure}[H]
@@ -216,7 +216,7 @@ right  = 3.00cm]{geometry}
 \addcontentsline{toc}{section}{\large\color{- }Behavioural description in VHDL}
 
 \b{itemize}
-    \i Behavioural style describes a design in terms of its behaviour, and not in terms of a netlist of components. We describe behaviour through ``if-then-else” type of constructs, loops, sequential and concurrent assignment statements. Statements like “if-then-else” are inherently sequential. These must therefore occur only inside sequential bodies like processes.
+    \i {\color{green}Behavioural style} describes a design in terms of its behaviour, and not in terms of a netlist of components. We describe behaviour through ``if-then-else” type of constructs, loops, sequential and concurrent assignment statements. Statements like “if-then-else” are inherently sequential. These must therefore occur only inside sequential bodies like processes.
     \i A concurrent assignment can be made conditionally by using `when’ clauses:\\
     \hspace*{50pt}name \textless= [delay-mechanism]\\
     \hspace*{70pt}waveform \tb{when} Boolean-expression \tb{else}\\
@@ -225,7 +225,7 @@ right  = 3.00cm]{geometry}
     \b{itemize}
         \item[$-$] \tb{Logical operators:} AND, OR, NAND, NOR, OR, XNOR and NOT
         \item[$-$] \tb{Relational operators:} =, /, \textless, \textless=, \textgreater, \textgreater=
-        \item[$-$] \tb{Shift operators:} SLL (logical left), SLA (arithmetic left) SRL (logical right), SRA (Arithmetic right), ROL (rotate left) and ROR (rotate right)
+        \item[$-$] \tb{Shift operators:} SLL (logical left), SLA (arithmetic left), SRL (logical right), SRA (Arithmetic right), ROL (rotate left) and ROR (rotate right)
     \e{itemize}
     \i Sequential constructs need to be placed inside a process. A process uses the syntax:\\\\
     \hspace*{50pt} [process-label:] \tb{process} [(sensitivity-list)][\tb{is}]\\
@@ -241,7 +241,7 @@ right  = 3.00cm]{geometry}
 \addcontentsline{toc}{section}{\large\color{- }JTAG and Scanchain}
 \tb{JTAG:}
 \b{itemize}
-    \i Joint Test Action Group
+    \i {\color{green}Joint Test Action Group}
     \i Industry standard for verifying designs and testing PCBs
     \i Connects to an on-chip Test Access Port (TAP) controller
     \i TAP controller implements a protocol to access a set of registers or pins of a system
@@ -286,10 +286,10 @@ right  = 3.00cm]{geometry}
     \e{itemize}
     \i \tb{wait statement:} it can be used in one of four ways:
     \b{itemize}
-        \item[$-$] wait on: it is a long form version of the sensitivity list. The process will fire only if there is a change in any of the items in the statement.
-        \item[$-$] wait until: this involves a boolean condition to be true. There is a boolean expression which is given with this statement, and when it evaluates to true, the process is fired. This is used largely to make a system sensitive to a single edge or a single level.
-        \item[$-$] wait for: this is used to make the system wait for a fixed time. The time has to be specified. This is used more in testbenches where an input to a system needs to be applied for a fixed time, until a new one can be applied to get a reliable output.
-        \item[$-$] wait: just tell the process to die and never fire again. Usually used after application of the last input, to formally kill the process. Every process has to compulsorily have atleast one of these wait statements else the compiler will throw an error (so that the process need not be running all the time, thereby loading the simulation software).
+        \item[$-$] \tb{wait on:} it is a long form version of the sensitivity list. The process will fire only if there is a change in any of the items in the statement.
+        \item[$-$] \tb{wait until:} this involves a boolean condition to be true. There is a boolean expression which is given with this statement, and when it evaluates to true, the process is fired. This is used largely to make a system sensitive to a single edge or a single level.
+        \item[$-$] \tb{wait for:} this is used to make the system wait for a fixed time. The time has to be specified. This is used more in testbenches where an input to a system needs to be applied for a fixed time, until a new one can be applied to get a reliable output.
+        \item[$-$] \tb{wait:} just tell the process to die and never fire again. Usually used after application of the last input, to formally kill the process. Every process has to compulsorily have atleast one of these wait statements else the compiler will throw an error (so that the process need not be running all the time, thereby loading the simulation software).
     \e{itemize}
     \i \tb{if statement:} it can be used only inside a process. It's syntax is:
     \begin{figure}[H]
@@ -308,7 +308,7 @@ right  = 3.00cm]{geometry}
 \addcontentsline{toc}{section}{\large\color{- }Sequential circuits and FSMs}
 \b{itemize}
     \i In {\color{green}sequential systems} output could depend on what are the inputs you get now, as well as what was your past output
-    \i Between each clock positive edge, the flip-flops have a value at their output, which is called the holding output. At each instant, it gives some information. This is called {\color{green}state} of a system. If there are a defined number of states in the system (8 in the previous case), it is called a {\color{green}Finite State Machine (FSM)}
+    \i Between each clock positive edge, the flip-flops have a value at their output, which is called the holding output. At each instant, it gives some information. This is called {\color{green}state} of a system. If there are a defined number of states in the system (8 in the previous case), it is called a {\color{green}Finite State Machine (FSM).}
     \i \tb{State diagram:}
     \b{itemize}
         \item[$-$] contains all states of the systems
